@@ -1,0 +1,126 @@
+The codes are available at 
+\begin{lstlisting}
+vaman/fpga/setup/codes/
+\end{lstlisting}
+%%
+\subsection{Setup}
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item Follow the instructions in 
+\begin{lstlisting}
+vaman/installation/termuxdebian/termux_debian_fpga.txt
+\end{lstlisting}
+%
+\iffalse
+\item Login to termux-debian on the android device and execute the following commands
+\begin{lstlisting}
+cd /sdcard/Downloads
+mkdir -p fpga-examples
+cd/vaman/blink
+ql_symbiflow -compile -src /storage/emulated/0/Download/blink -d ql-eos-s3 -P PU64 -v helloworldfpga.v -t helloworldfpga -p quickfeather.pcf -dump binary
+scp /storage/emulated/0/Download/blink/helloworldfpga.bin pi@192.168.0.114:
+\end{lstlisting}
+Make sure that the appropriate IP address for the raspberry pi is given in the above command.
+\item Now execute the following commands on the raspberry pi.
+\begin{lstlisting}
+python3 /root/Vaman-dev/Vaman-sdk/TinyFPGA-Programmer-Application/tinyfpga-programmer-gui.py --port /dev/ttyACM0 --appfpga /home/pi/helloworldfpga.bin --mode fpga
+\end{lstlisting}
+\item Make sure that the correct USB port address is given in the above command.  Then press the button to the right of the USB port.  After some time, the LED will start blinking red.
+	\fi
+\end{enumerate}
+%%
+\subsection{Frequency}
+%
+\renewcommand{\theequation}{\theenumi}
+\renewcommand{\thefigure}{\theenumi}
+\begin{enumerate}[label=\thesubsection.\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\numberwithin{table}{enumi}
+\item In the following verilog program, 
+\label{eq:vaman/fpga/setup/program}
+\begin{lstlisting}
+codes/blink/helloworldfpga.v
+\end{lstlisting}
+pay attention to the following lines
+%%
+\begin{lstlisting}
+delay = delay+1;                                                                                                   
+if(delay > 20000000)
+begin
+delay=27'b0;
+led=!led;
+end
+\end{lstlisting}
+%%
+It may be deduced from the above that the blink frequency is 20 MHz.
+\item In instruction  \ref{eq:vaman/fpga/setup/program}, replace
+\label{eq:vaman/fpga/setup/binary}
+\begin{lstlisting}
+if(delay > 20000000)
+\end{lstlisting}
+%
+with
+\begin{lstlisting}
+if(delay==27'b1001100010010110100000000)
+\end{lstlisting}
+and execute the verilog code.
+\item Since the delay is 20 MHz, the blink period is 1 second.  Modify the verilog code
+so that the blink period becomes 0.5s.
+\item Find the bit length of 20 MHz.
+\\
+\solution 
+\begin{align}
+\log_2\brak{20000000} \approx 27
+\end{align}
+\item Obtain the above answer using a Python code.
+\\
+\solution Exeucte the following code and compare with instruction  \ref{eq:vaman/fpga/setup/binary}.
+\begin{lstlisting}
+codes/blink/freq_count.py
+\end{lstlisting}
+\item Replace  the following line in the code in instruciton  \ref{eq:vaman/fpga/setup/program} 
+\begin{lstlisting}
+assign redled = led; //If you want to change led colour to red,
+\end{lstlisting}
+with
+\begin{lstlisting}
+assign blueled = led; 
+\end{lstlisting}
+and execute the code.
+\item Ensure that the LED stays on in green colour.
+	\\
+\solution  Execute the following code
+\begin{lstlisting}
+vaman/setup/codes/blink/onoff.v
+\end{lstlisting}
+\item  Using Table \ref{tab:vaman/fpga/setup/input} and Fig.  \ref{fig:vaman/fpga/setup/pin_sheet}, control the onboard LED
+through an external input. Connect an external LED and control it using an output pin as well.
+%
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Type & Vaman Pin  &  Connection \\ \hline
+Input &  IO\_28 &  GND\\ \hline
+Output  & IO\_11  &  LED\\ \hline
+\end{tabular}
+\caption{Vaman Input/Output.}
+\label{tab:vaman/fpga/setup/input}
+\end{table}
+
+\solution Execute the following code and take out the input pin connect to GND. Plug it again.
+Do this repeatedly.
+
+\begin{lstlisting}
+vaman/setup/codes/input/blink_ip.v
+vaman/setup/codes/input/pygmy.pcf
+\end{lstlisting}
+
+
+\end{enumerate}
+

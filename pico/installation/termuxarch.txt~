@@ -1,0 +1,69 @@
+#See instructions here
+https://github.com/raspberrypi/pico-sdk
+
+#login to termuxarch
+startarch l user
+
+#Install arm toolchain
+cd /home/user/txhome/
+wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-aarch64-linux.tar.bz2
+tar -xvjf  gcc-arm-none-eabi-9-2020-q2-update-aarch64-linux.tar.bz2
+nano /home/user/.bashrc
+#At the end of the file
+export PATH=/home/user/txhome/gcc-arm-none-eabi-9-2020-q2-update/bin:$PATH
+#save and exit
+#Check arm version
+arm-none-eabi-gcc --version
+cd /home/user/txhome
+
+#Download pico-sdk
+git clone https://github.com/raspberrypi/pico-sdk
+
+
+#Download blink program
+mkdir /home/user/txhome/pico-examples
+cd /home/user/txhome/pico-examples
+svn co https://github.com/gadepall/pico/trunk/arm/codes/setup/blink
+nano blink/CMakeLists.txt
+#Modify the following path to the sdk 
+include(/root/pico-sdk/pico_sdk_init.cmake)
+#as
+include(/home/user/txhome/pico-sdk/pico_sdk_init.cmake)
+#Steps for generating bin file
+cd blink
+mkdir build #do this only once
+cd build
+cmake ..
+make -j4
+#The  blink.uf2 file will be generated in the build directory
+
+
+#On raspberry pi
+#Connect pico to the pi
+dmesg | tail
+# Check dev location
+sudo fdisk -l
+#Assuming that location is /dev/sda1,
+sudo mkdir /mnt/pico #only the first time
+sudo mount /dev/sda1 /mnt/pico
+ls /mnt/pico
+#If you see
+INDEX.HTM  INFO_UF2.TXT
+#pico is mounted properly
+
+
+#Send the blink.uf2 file to the raspberry pi from termuxarch
+scp blink.uf2 pi@192.168.50.252:
+
+#Flash the binary to the pico
+sudo cp blink.uf2 /mnt/pico
+sudo umount /mnt/pico
+
+#To repeat the above process for a fresh binary, 
+#hold BOOTSEL button on the pico, disconnect and reconnect the usb
+
+
+
+
+
+

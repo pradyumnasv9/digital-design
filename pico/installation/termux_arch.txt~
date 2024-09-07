@@ -1,0 +1,45 @@
+#See instructions here
+https://github.com/raspberrypi/pico-sdk
+
+#login to termuxarch
+startarch l user
+
+#Install arm toolchain
+apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
+
+#Download pico-sdk
+git clone https://github.com/raspberrypi/pico-sdk
+
+#Download blink program
+svn co https://github.com/gadepall/pico/trunk/arm/codes/setup/blink
+nano blink/CmakeLists.txt
+#Modify the following path to the sdk if required
+include(/root/pico-sdk/pico_sdk_init.cmake)
+#Steps for generating bin file
+cd blink
+mkdir build #do this only once
+cd build
+cmake ..
+make -j4
+#The .bin file will be generated in the build directory
+
+#Send the .bin file to the raspberry pi
+
+#On raspberry pi
+#Connect pico to the pi
+dmesg | tail
+# Check dev location
+sudo fdisk -l
+#Assuming that location is /dev/sda1,
+sudo mkdir /mnt/pico #only the first time
+sudo mount /dev/sda1 /mnt/pico
+ls /mnt/pico
+#If you see
+INDEX.HTM  INFO_UF2.TXT
+#pico is mounted properly
+
+
+
+
+
+

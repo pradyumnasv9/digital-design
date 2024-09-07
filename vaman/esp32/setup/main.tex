@@ -1,0 +1,95 @@
+Here we show how to program the ESP32 on the Vaman using the Arduino framework.
+%\subsubsection{Connections}
+\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\item Make sure that Vaman board does not power any devices.  
+\item Make connections as shown in \autoref{tab:arduino-uart}.
+	%and \autoref{fig:vaman/uart/1}. 
+\item The Vaman pin diagram is available in \autoref{fig:vaman-pin_sheet}.
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{vaman/esp32/vaman-esp32/lcd/figs/pin_sheet.png}
+	\caption{Vaman pins.  Right side reperesents ESP32 and left side M4-FPGA (Pygmy).}
+\label{fig:vaman-pin_sheet}
+\end{figure}
+\begin{table}[!ht]
+	\centering
+\input{vaman/esp32/vaman-esp32/arduino-uart/tables/rpi-vaman-uart.tex}
+\caption{}
+\label{tab:arduino-uart}
+\end{table}
+%
+\item Connect the UART to raspberry pi through USB.  
+\item Connect the pins between Vaman-ESP32 and Vaman-PYGMY as per \autoref{tab:vaman/esp32/setup/onboard}
+\begin{table}[h]
+\centering
+\input{./vaman/esp32/setup/tables/onboard.tex}
+\caption{}
+\label{tab:vaman/esp32/setup/onboard}
+\end{table}
+\item On termux on your phone, 
+\begin{lstlisting}
+cd vaman/esp32/codes/ide/blink
+pio run
+\end{lstlisting}
+\item Transfer the ini and bin files to the rpi 
+\begin{lstlisting}
+scp platformio.ini pi@192.168.50.252:./hi/platformio.ini
+
+scp .pio/build/esp32doit-devkit-v1/firmware.bin pi@192.168.50.252:./hi/.pio/build/esp32doit-devkit-v1/firmware.bin
+\end{lstlisting}
+\item On rpi,
+\begin{lstlisting}
+cd /home/pi/hi
+pio run -t nobuild -t upload
+\end{lstlisting}
+You should see the blue led blinking.
+\item Now disconnect pin 2 from pin 18 and connect to pygmy GPIO pin 21.  
+\item Repeat the above exercise using 
+	GPIO pin 22.
+\item On your phone, open 
+\begin{lstlisting}
+src/main.cpp 
+\end{lstlisting}
+and change the delay to 
+\begin{lstlisting}
+delay(100);
+\end{lstlisting}
+and execute the code by following the steps above.
+\item Flash the following code. 
+\begin{lstlisting}
+vaman/esp32/codes/ide/ota/setup
+\end{lstlisting}
+		after entering your wifi username and password (in quotes below)
+\begin{lstlisting}
+#define STASSID "..." // Add your network credentials
+#define STAPSK  "..."
+\end{lstlisting}
+in src/main.cpp file
+\item You should be able to find the ip address of your vaman-esp using 
+\begin{lstlisting}
+ifconfig
+nmap -sn 192.168.231.1/24
+\end{lstlisting}
+where your computer's ip address is the output of ifconfig and given by 192.168.231.x
+\item Assuming that the username is gvv and password is abcd, flash the following code wirelessly
+\begin{lstlisting}
+vaman/esp32/codes/ide/ota/blink
+\end{lstlisting}
+through 
+\begin{lstlisting}
+pio run 
+pio run -t nobuild -t upload --upload-port 192.168.231.245
+\end{lstlisting}
+where you may replace the above ip address with the ip address of your vaman-esp.
+\item Flash the following code OTA
+\begin{lstlisting}
+vaman/esp32/codes/ide/ota/blinkt
+\end{lstlisting}
+You should see the onboard LEDs blinking.
+\item Change the blink duration to 100 ms.
+\item Execute the code in 
+\begin{lstlisting}
+vaman/esp32/codes/ide/ota/sevenseg/static/
+\end{lstlisting}
+to control the seven segement display.
+\end{enumerate}
