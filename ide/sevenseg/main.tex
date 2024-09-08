@@ -16,16 +16,35 @@ a seven segment display.
 \caption{Components}
 \label{table:components}
 \end{table}
+%
 \item Breadboard:
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.75\columnwidth]{ide/sevenseg/figs/breadboard}
+\end{center}
+\caption{Bread board connnections}
+\label{fig:breadboard}
+\end{figure}
+%
 The breadboard can be divided into 5 segments.  In each of the green segements, the pins are internally connected so as to have the same voltage.  Similarly, in the central segments, the pins in each column  are internally connected in the same fashion as the blue columns. 
 \item Seven Segment Display:
+\begin{figure}[!htb]
+%\begin{figure}[H]
+\begin{center}
+\resizebox {0.5\columnwidth} {!} {
+\input{ide/sevenseg/figs/sevenseg.tex}
+}
+\end{center}
+\caption{Seven Segment pins}
+\label{fig:sevenseg}
+\end{figure}
+%
 The seven segment display in Fig. \ref{fig:sevenseg} has eight pins, $a, b, c, d, e, f, g$ and $dot$ that take an active LOW input, i.e.  the LED will glow only if the input is connected to ground.  Each of these pins is connected to an LED segment.  The $dot$ pin is  reserved for the $\cdot$ LED.  
-
+%
 \item Arduino:
 The Arduino Uno has some ground pins, analog input pins A0-A3 and digital pins D1-D13 that can be used for both input as well as output. It also has two power pins that can generate 3.3$V$ and 5$V$.  In the following exercises, only the GND, 5$V$ and digital pins will be used.
-
 \end{enumerate}
-
+%
 \subsection{Display Control through Hardware }
 \subsubsection{Powering the Display}
 \begin{enumerate}[label=\arabic*.,ref=\theenumi]
@@ -40,16 +59,6 @@ The Arduino Uno has some ground pins, analog input pins A0-A3 and digital pins D
 \label{table:ard_breadboard}
 \end{table}
 
-\begin{figure}[H]
-\begin{center}
-\includegraphics[width=0.75\columnwidth]{ide/sevenseg/figs/breadboard}
-\end{center}
-\caption{Bread board connnections}
-\label{fig:breadboard}
-\end{figure}
-
-
-%
 %\begin{center}
 	%\includegraphics[width=0.75\columnwidth]{sevenseg}
 %\end{center}
@@ -63,44 +72,15 @@ Make the  connections in Table \ref{table:ard_disp}.
 \caption{Connecting Seven segment display on Bread board}
 \label{table:ard_disp}
 \end{table}
-
-%
-%
-\begin{figure}[H]
-\begin{center}
-\resizebox {0.5\columnwidth} {!} {
-\input{ide/sevenseg/figs/sevenseg.tex}
-}
-\end{center}
-\caption{Seven Segment pins}
-\label{fig:sevenseg}
-\end{figure}
-
 %
 \item
 	Connect the Arduino to the computer. The DOT led should glow.
 \end{enumerate}
 \subsubsection{Controlling the Display}
+%
 Fig. \ref{fig:sevenseg12} explains how to get decimal digits using the seven segment display. GND=0.  
-\begin{enumerate}[label=\arabic*.,ref=\theenumi]
-\item	Generate the number 1 on the display by connecting only the pins $b$ and $c$ to GND (=0). This corresponds to the  first row of \ref{table:arduioport}. 1 means not connecting to GND.
-	
-\item
-	Repeat the above exercise to generate the number 2 on the display.
-	
-%
-\item
-Draw the numbers 0-9 as in Fig. \ref{fig:sevenseg12} and complete Table \ref{table:arduioport}
-	
-\begin{table}[H]
-\centering
-\input{ide/sevenseg/figs/arduinoport.tex}
-\caption{}
-\label{table:arduioport}
-\end{table}
-%
-%
 \begin{figure}[H]
+%\begin{figure}[!htb]
 \begin{center}
 \resizebox {0.8\columnwidth} {!} {
 \input{ide/sevenseg/figs/sevenseg12.tex}
@@ -109,6 +89,21 @@ Draw the numbers 0-9 as in Fig. \ref{fig:sevenseg12} and complete Table \ref{tab
 \caption{Seven Segment connections}
 \label{fig:sevenseg12}
 \end{figure}
+\begin{enumerate}[label=\arabic*.,ref=\theenumi]
+\item	Generate the number 1 on the display by connecting only the pins $b$ and $c$ to GND (=0). This corresponds to the  first row of \ref{table:arduioport}. 1 means not connecting to GND.
+\item
+	Repeat the above exercise to generate the number 2 on the display.
+%
+\item
+Draw the numbers 0-9 as in Fig. \ref{fig:sevenseg12} and complete Table \ref{table:arduioport}
+%	
+\begin{table}[H]
+\centering
+\input{ide/sevenseg/figs/arduinoport.tex}
+\caption{}
+\label{table:arduioport}
+\end{table}
+%
 %
 \end{enumerate}
 \subsection{Display Control through Software}

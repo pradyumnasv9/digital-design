@@ -4,13 +4,15 @@ Here we show how to use the 7447 BCD-Seven Segment Display decoder to learn Bool
 	%	\numberwithin{figure}{section}
 \item
 Make connections between the seven segment display in Fig. \ref{fig:sevenseg} and the  7447 IC in Fig. \ref{fig:7447} as shown in Table \ref{table:7447_disp}
-
+%
+\iffalse
 \begin{table}[H]
 \centering
 \input{ide/7447/figs/components.tex}
 \caption{7447 components}
 \label{table:components-7447}
 \end{table}
+\fi
 %
 \begin{table}[H]
 \centering
@@ -43,12 +45,11 @@ Table \ref{table:bin2dec} and connect $V_{CC} = 5$V. You should see the number 0
 \end{table}
 %
 \begin{figure}[H]
-\begin{center}
+	\centering
 \resizebox {\columnwidth} {!} {
 \input{ide/7447/figs/7447.tex}
 }
-\end{center}
-\caption{}
+\caption{7447 IC}
 \label{fig:7447}
 \end{figure}
 %
