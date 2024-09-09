@@ -404,83 +404,68 @@ in
 	has an output $F$ given by \rule{1cm}{0.5pt}.
 \begin{enumerate}
 	\item$A+B$
-	\item$A.\bar{B}$
+	\item$A\bar{B}$
 	\item$A+\bar{B}$
 	\item$\bar{B}$
 \end{enumerate}
 \hfill (GATE IN 2021)
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\columnwidth]{figs/gatemage.jpg}
+\includegraphics[width=0.5\columnwidth]{figs/gatemage.jpg}
 	\caption{}
 \label{fig:GATE IN 2021}
 \end{figure}
-
+%
 \item Consider the following Boolean expression 
 \begin{align*} F = (X+Y+Z)(\bar{X}+Y)(\bar{Y}+Z) \end{align*}
-       
-Which of the following Boolean expressions is/are equivalent to $\overline{F}$ (complement of 
- F)?
- 
-\hfill{(Gate CS 2021,42)}
+%       
+Which of the following Boolean expressions is/are equivalent to $\overline{F}$ ?
+% 
 \begin{enumerate}                                     
 \item $(\bar{X}+\bar{Y}+\bar{Z})(X+\bar{Y})(Y+\bar{Z})$
 \item $X\bar{Y}+\bar{Z}$
 \item $(X+\bar{Z})(\bar{Y}+\bar{Z})$
 \item $X\bar{Y}+Y\bar{Z}+\bar{X}\bar{Y}\bar{Z}$ 
 \end{enumerate}
-
-    \item The propagation delays of the XOR gate, AND gate and multiplexer \brak{MUX} in the circut shown in  
+\hfill{(GATE CS 2021)}
+%
+    \item The circut shown in  
 \figref{fig:block_diagram}
-	    are $4 ns$, $2 ns$ and $1 ns$, respectively.
-    If all the inputs $P, Q, R, S$ and T are applied simultaneously and held constant, the maximum propagation delay of the circuit is
-\hfill(GATE-EC2021,31)  
+	    comprises of XOR, AND gates and multiplexers.  
+    If all the inputs $P, Q, R, S$ and $T$ are applied simultaneously and held constant, find $Y$.
 
+\hfill(GATE EC 2021)  
 \begin{figure}[H]
+	\centering
 	\resizebox{0.75\columnwidth}{!}{
 \input{figs/figsh.tex}
 	}
-\caption{circuit daigram} 
+\caption{} 
 \label{fig:block_diagram}
 \end{figure}
-\begin{enumerate}
-
-    \item $3 ns$
-    \item $5 ns$
-    \item $6 ns$
-    \item $7 ns$
-\end{enumerate}
 \item  The following combination of logic gates
 in
 		      \figref{fig:GATE PH 2021}
-	represent the operation
- \hfill(GATE PH 2021)
-	      \begin{figure}[H]
-		      \centering
-		      \resizebox{0.75\columnwidth}{!}{%
-		      \input{figs/nand.tex}
-		      }
-	              \caption{combination circuit}
-		      \label{fig:GATE PH 2021}
-	      \end{figure}
-
+	represents the operation
 	\begin{enumerate}
        \item OR
        \item NAND
        \item AND
        \item NOR
    \end{enumerate}
-\item Consider the boolean Function $z\brak{a,b,c}$ from below 
-			\figref{fig:203}.
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.75\columnwidth]{figs/203.png}
-			\caption{circuit diagram}
-			\label{fig:203}
-		\end{figure}
-		
-	\hfill{(Gate CS-2020)}
-	
+%
+ \hfill(GATE PH 2021)
+	      \begin{figure}[H]
+		      \centering
+		      \resizebox{0.25\columnwidth}{!}{%
+		      \input{figs/nand.tex}
+		      }
+	              \caption{}
+		      \label{fig:GATE PH 2021}
+	      \end{figure}
+%
+\item Consider the boolean Function $z\brak{a,b,c}$ from 
+			\figref{fig:203} below.
 		Which of the following minterm lists represent the circuit given above?
 	\begin{enumerate}
 		\item $z=\Sigma\brak{0,1,3,7}$
@@ -488,88 +473,65 @@ in
 		\item $z=\Sigma\brak{2,4,5,6,7}$
 		\item $z=\Sigma\brak{2,3,5}$
 	\end{enumerate}	   
-\item In the latch circuit shown
-in
-\figref{figure_1}, the NAND gates have non-zero but unequal propagation delays. The present input condition is: $P=Q=\lq 0\rq$. If the input condition is changed simultaneously to $P=Q=\lq 1\rq$,the outputs $X$ and $Y$ are 
-\begin{figure}[H]
-\centering
-\resizebox{0.75\columnwidth}{!}{%
-\input{ide/7447/figs/ec_2017_15.tex}
-	}
-	\caption{}
-\label{figure_1}
-\end{figure}
-\begin{enumerate}
-\item $X=\lq 1\rq,Y=\lq 1 \rq$
-\item either $X=\lq 1\rq,Y=\lq 0\rq$ or $X=\lq 0\rq,Y=\lq 1\rq$
-\item either $X=\lq 1\rq,Y=\lq 1\rq$ or $X=\lq 0\rq,Y=\lq 0\rq$
-\item $X=\lq 0\rq,Y=\lq 0 \rq$
-\end{enumerate}
-\hfill(GATE EC 2017)
-
-\item Consider three $4$-variable functions $f_1, f_2, $and $f_3,$ which are expressed in sum-of-minterms as \newline \quad $f_1 = \sum\brak{0,2,5,8,14}$, \quad $f_2=\sum\brak{2,3,6,8,14,15}$, \quad $f_3 = \sum\brak{2,7,11,14}$ \newline For the following circuit 
+	\hfill{(GATE CS 2020)}
+%	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\columnwidth]{figs/203.png}
+			\caption{}
+			\label{fig:203}
+		\end{figure}
+%
+\item Consider three $4$-variable functions $f_1, f_2, $and $f_3,$ which are expressed in sum-of-minterms as 
+$$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7,11,14}$$. For the following circuit 
 	in 
-	\figref{fig:GATE-CS2019,30}
-	with one AND gate and one XOR gate, the output function $f$ can be expressed as:
-	\hfill(GATE-CS2019,30)
-	\begin{figure}[H]
-		 \centering
-		 \resizebox{0.75\columnwidth}{!}{%
-			\input{ide/7447/figs/fig2.tex}
-			}
-                 \caption{Circuit Daigram}
-	\label{fig:GATE-CS2019,30}
-	\end{figure}
+	\figref{fig:GATE-CS2019,30},
+	with one AND gate and one XOR gate, the output function $f$ can be expressed as
 		\begin{enumerate}
 		\item $\sum\brak{7,8,11}$
 		\item $\sum\brak{2,7,8,11,14}$
 		\item $\sum\brak{2,14}$
 		\item $\sum\brak{0,2,3,5,6,7,8,11,14,15}$
 		\end{enumerate}
-
+%
+	\hfill(GATE-CS2019,30)
+	\begin{figure}[H]
+		 \centering
+		 \resizebox{0.5\columnwidth}{!}{%
+			\input{ide/7447/figs/fig2.tex}
+			}
+                 \caption{}
+	\label{fig:GATE-CS2019,30}
+	\end{figure}
 \item In the circuit shown
 	in \figref{fig:GATE-EC2019,14},
 	what are the values of $F$ for $EN=0$ and $EN=1$,  respectively?
- \hfill(GATE-EC2019,14)  
-
-\begin{figure}[H]
-    \centering
-    \resizebox{0.75\columnwidth}{!}{%
-    \input{ide/7447/figs/fig3.tex}
-	}
-    \caption{Circuit Diagram}
-	\label{fig:GATE-EC2019,14} 
-\end{figure}
 \begin{enumerate}
     \item $0$ and $D$
     \item $Hi-Z$ and $D$
     \item $0$ and $1$
     \item $Hi-Z$ and $\overline{D}$
 \end{enumerate}
-\item In the circuit shown
-	   in \figref{fig:GATE-EC2019,15},
-	$A$ and $B$ are the inputs and $F$ is the output. What is the functionality of the circuit?
-           \hfill(GATE-EC2019,15)
-           
+ \hfill(GATE EC 2019)  
+%
 \begin{figure}[H]
-\centering
-\resizebox{0.5\columnwidth}{!}{%
-\input{ide/7447/figs/fig5.tex}
+    \centering
+    \resizebox{0.5\columnwidth}{!}{%
+    \input{ide/7447/figs/fig3.tex}
 	}
-\caption{Circuit Diagram}
-	   \label{fig:GATE-EC2019,15}
+    \caption{Circuit Diagram}
+	\label{fig:GATE-EC2019,14} 
 \end{figure}
-\begin{enumerate}
-\item Latch
-\item XNOR
-\item SRAM Cell
-\item XOR
-\end{enumerate}
-
 \item In the circuit shown below in 
 	    \figref{fig:GATE-IN2019,34},
-	 assume that the comparators are ideal and all components have zero propagation delay. In one period of the input signal $Vin=6\sin\brak{\omega t}$, the fraction of the time for which the output OUT is in logic HIGH is 
-		                 \hfill(GATE-IN2019,34)
+	 assume that the comparators are ideal and all components have zero propagation delay. In one period of the input signal $V_{in}=6\sin\brak{\omega t}$, the fraction of the time for which the output OUT is in logic HIGH is 
+\begin{enumerate}[itemsep=1ex]
+	\item $\frac{1}{12}$
+	\item $\frac{1}{2}$
+	\item $\frac{2}{3}$
+	\item $\frac{5}{6}$
+\end{enumerate}
+		                 \hfill(GATE IN 2019)
 \begin{figure}[H]
 \centering
 \resizebox{0.75\columnwidth}{!}{%
@@ -578,18 +540,13 @@ in
 	    \caption{Circuit Daigram}
 	    \label{fig:GATE-IN2019,34}
      \end{figure}
-\begin{enumerate}
-	\item $\dfrac{1}{12}$
-	\item $\dfrac{1}{2}$
-	\item $\dfrac{2}{3}$
-	\item $\dfrac{5}{6}$
-\end{enumerate}
 
 
 \item 
 	\figref{fig:GATE-IN2019,22}
-	shows the $ith$ full-adder block of a binary adder circuit. $C_i$ is the input carry and $C_{i+1}$is the output carry of the circuit. Assume that each logic gate has a delay of $2$ nanosecond, with no additional time delay due to the interconnecting wires. If the inputs $A_i$ , $B_i$; are available and stable throughout the carry propagation, the maximum time taken for an input $C_i$, to produce a steady-state output $C_{i+1}$ is $\underline{\hspace{18pt}}$ nanosecond.
-	               \hfill(GATE-IN2019,22)
+	shows the $ith$ full-adder block of a binary adder circuit. $C_i$ is the input carry and $C_{i+1}$is the output carry of the circuit.  If the inputs $A_i, B_i$; are available and stable throughout the carry propagation, find the outputs $S_i$ and $C_{i+1}$.
+
+	               \hfill(GATE IN 2019)
 \begin{figure}[H] 
     \centering
     \resizebox{0.75\columnwidth}{!}{%
@@ -601,52 +558,46 @@ in
 \item The Boolean operation performed by the following  circuit 
 in
 \figref{fig:figure13}
-	at the output $O$ is \underline{\hspace{2cm}}
-    $\hfill\brak{GATE \enspace IN2020-12}$
+	at the output $O$ is \rule{1cm}{0.1pt}.
+%
+\begin{enumerate}
 
+            \item  $O=S_1\oplus S_0$ 
+            
+            \item  $O=S_1\overline{\rm S_0}$
+            
+            \item  $O=S_1 + S_0$
+            
+            \item $O=S_0\overline{\rm S _1}$
+ \end{enumerate}
+    \hfill (GATE IN 2020)
+%
 \begin{figure}[H]
 	\centering
 	\resizebox{0.75\columnwidth}{!}{%
 \input{ide/7447/figs/fig13.tex}
 	}
-\caption{Circuit Diagram}
+\caption{}
 \label{fig:figure13}
 \end{figure}
-
-\begin{enumerate}
-
-            \item  $O=S_1\oplus S_0$ 
-            
-            \item  $O=S_1\bullet\overline{\rm S_0}$
-            
-            \item  $O=S_1 + S_0$
-            
-            \item $O=S_0\bullet\overline{\rm S _1}$
- \end{enumerate}
 \item  The chip select logic for a certain DRAM chip in a memory system design is shown below
 	in
 \figref{fig:figure14}.
 	Assume that the memory system has 16 address lines denoted by ${A_{15}}$ to ${A_0}$. What is the range of addresses (in hexadecimal) of the memory system that can get enabled by the chip select (CS) signal?
-\hfill{\brak{GATE \enspace CS2019-2}}
-
-\begin{figure}[H]
-\input{ide/7447/figs/fig14.tex}
-\caption{Logic Diagram}
-\label{fig:figure14}
-\end{figure}
-
 \begin{enumerate}
 \item ${C800}$ to ${CFFF}$
 \item ${CA00}$ to ${CAFF}$
 \item ${CA00}$ to ${C8FF}$
 \item ${DA00}$ to ${DFFF}$
 \end{enumerate}  
-
-
-\item A $6{\frac{1}{2}}$ digit time counter is set in the time period mode of operation and range is set as 'ns'. For an input signalthe time-counter displays $1000000$. with the same input signal,The time countr is changed to 'frequency' mode of operation and the range is set as 'HZ'.The display will be show the number$\underline{\hspace{2cm}}$.
-\hfill{\brak{GATE \enspace IN2020-43}}
-
-
+\hfill (GATE CS 2019)
+%
+\begin{figure}[H]
+\input{ide/7447/figs/fig14.tex}
+\caption{}
+\label{fig:figure14}
+\end{figure}
+%
 \item  A $2\times2$ ROM array is built with the help of diodes as shown in the circuit below
 	in \figref{fig:2rom}. Here $W0$ and $W1$ are signals that select the word lines and $B0$ and $B1$ are signals that are output of the sense amps based on the stored data corresponding to the bit lines during the read operation.
 %
@@ -667,81 +618,63 @@ in
     \item \myvec{1 & 0\\1 & 0}    
     \item \myvec{1 & 1\\0 & 0}
 \end{enumerate}
-
-\item The two inputs A and B are connected to to an R-S latch via two AND gates as shown in  
-       \figref{fig:GATE IN2017,43}.
-If $A=1$ and $B=0$, the output $Q\bar{Q}$ is
-    \begin{figure}[H]
-        \centering
-	\resizebox{0.75\columnwidth}{!}{%
-        \input{ide/7447/figs/fig15.tex}
-	    }
-	    \caption{}
-       \label{fig:GATE IN2017,43}
-       \end{figure}
-       \hfill(GATE IN2017,43)
-    \begin{enumerate}
-   		\item $00$ 
-   		\item $10$ 
-   		\item $01$ 
-   		\item $11$ 
-   
-   \end{enumerate}
+%
 \item $A$ and $B$ are logical inputs and $X$ is the logical output shown in 
 \figref{fig:gate_in_2017_30}.
-	The output $X$ is related to $A$ and $B$ by \hfill{(GATE IN 2017)}
+	The output $X$ is related to $A$ and $B$ by 
+\begin{enumerate}
+\item $X = \overline{A}B + \overline{B}A$
+\item $X = AB + \overline{B}A$
+\item $X = AB + \overline{B}\overline{A}$
+\item $X = \overline{A}\overline{B} + \overline{B}A$
+\end{enumerate}
+\hfill (GATE IN 2017)
 \begin{figure}[H]
 \centering
 \resizebox{0.75\columnwidth}{!}{%
 \input{ide/7447/figs/gate_in_2017_30.tex}
 	}
-\caption{Logic Gate Structure}
+\caption{}
 \label{fig:gate_in_2017_30}
 \end{figure}
-\begin{enumerate}[label=\Alph*.]
-\item $X = \overline{A}B + \overline{B}A$
-\item $X = AB + \overline{B}A$
-\item $X = AB + (\overline{B})(\overline{A})$
-\item $X = (\overline{A})(\overline{B}) + \overline{B}A$
-\end{enumerate}
-
-
 \item The functionality implemented by the circuit below 
 in
 \figref{fig:gate_ec_2016_43}
-	is \hfill{(GATE 2016 EC)}
-
-\begin{figure}[H]
-\centering
-\resizebox{0.75\columnwidth}{!}{%
-\input{ide/7447/figs/gate_ec_2016_43.tex}
-	}
-\caption{Multiplexer}
-\label{fig:gate_ec_2016_43}
-\end{figure}
-
-\begin{enumerate}[label=\Alph*.]
+	is 
+\begin{enumerate}
 \item 2-to-1 multiplexer
 \item 4-to-1 multiplexer
 \item 7-to-1 multiplexer
 \item 6-to-1 multiplexer
 \end{enumerate}
-\item A $2$-bit flash Analog to Digital Converter (ADC) is given in \figref{EE2016_37_fig1}. The input is $0 \leq V_{IN} \leq 3$ Volts. The expression of the LSB of the output $B_0$ as a boolean function of $X_2,X_1,$ and $X_0$ is \hfill(GATE EE2016 37)
+\hfill (GATE 2016 EC)
+%
 \begin{figure}[H]
 \centering
-\resizebox{0.75\columnwidth}{!}{%
-\input{ide/7447/figs/EE2016_37_fig.tex}
+\resizebox{0.5\columnwidth}{!}{%
+\input{ide/7447/figs/gate_ec_2016_43.tex}
 	}
-\caption{}
-\label{EE2016_37_fig1}
+\caption{Multiplexer}
+\label{fig:gate_ec_2016_43}
 \end{figure}
+%
+\item A $2$-bit flash Analog to Digital Converter (ADC) is given in \figref{EE2016_37_fig1}. The input is $0 \leq V_{IN} \leq 3$ Volts. The expression of the LSB of the output $B_0$ as a boolean function of $X_2,X_1,$ and $X_0$ is 
 \begin{enumerate}
 \item $X_0 \left[ \overline {X_2 \oplus X_1} \right]$
 \item $\overline {X_0} \left[ \overline {X_2 \oplus X_1} \right]$
 \item $X_0 \left[ X_2 \oplus X_1 \right]$
 \item $\overline{X_0} \left[ X_2 \oplus X_1 \right]$
 \end{enumerate}
-
+\hfill(GATE EE 2016)
+\begin{figure}[H]
+\centering
+\resizebox{0.5\columnwidth}{!}{%
+\input{ide/7447/figs/EE2016_37_fig.tex}
+	}
+\caption{}
+\label{EE2016_37_fig1}
+\end{figure}
+%
 \item Consider the Boolean function Z\brak{a,b,c}. Which one of the following minterm lists represents the 
  circuit given below  
  in
