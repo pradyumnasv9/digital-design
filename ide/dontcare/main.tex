@@ -7,7 +7,7 @@ We explain Karnaugh maps (K-map) using don't care conditions
 \ref{table:disp_dec}
 		%\cite{gvv_kmap}  
 		However, only the numbers from 0-9 are used as input/output
-in the decoder and we {\em don't care} about the numbers from 0-5  This phenomenon can be addressed by revising the truth table in 
+in the decoder and we {\em don't care} about the numbers from 10-15.  This phenomenon can be addressed by revising the truth table in 
 		Table 
 \ref{table:disp_dec}
 		%\cite{gvv_kmap}
@@ -23,7 +23,8 @@ to obtain Table \ref{table:dont_care_table}
 A = {W}^{\prime}
 \end{equation}
 \begin{figure}[H]
-\resizebox {\columnwidth} {!} {
+	\centering
+\resizebox {0.5\columnwidth} {!} {
 \input{ide/dontcare/figs/kmap_A_x}
 }
 \caption{K-map for $A$ with don't cares}
@@ -36,7 +37,8 @@ A = {W}^{\prime}
 B = WX^{\prime}Z^{\prime} + W^{\prime}X
 \end{equation}
 \begin{figure}[H]
-\resizebox {\columnwidth} {!} {
+	\centering
+\resizebox {0.5\columnwidth} {!} {
 \input{ide/dontcare/figs/kmap_B_x}
 }
 \caption{K-map for $B$ with don't cares}
@@ -49,7 +51,8 @@ B = WX^{\prime}Z^{\prime} + W^{\prime}X
 C = {X}^{\prime}{Y} + {W}^{\prime}{Y} + {W}{X}{Y}^{\prime}
 \end{equation}
 \begin{figure}[H]
-\resizebox {\columnwidth} {!} {
+	\centering
+\resizebox {0.5\columnwidth} {!} {
 \input{ide/dontcare/figs/kmap_C_x}
 }
 \caption{K-map for $C$ with don't cares}
@@ -62,17 +65,21 @@ C = {X}^{\prime}{Y} + {W}^{\prime}{Y} + {W}{X}{Y}^{\prime}
 D  = {W}^{\prime}{Z} + {W}{X}{Y}
 \end{equation}
 \begin{figure}[H]
-\resizebox {\columnwidth} {!} {
+	\centering
+\resizebox {0.5\columnwidth} {!} {
 \input{ide/dontcare/figs/kmap_D_x}
 }
 \caption{K-map for $D$ with don't cares}
 \label{fig:kmap_D_x}
 \end{figure}
 %
-\item Verify the incrementing decoder with don't care conditions using the arduino
+\item 
+	Verify the incrementing decoder with don't care conditions using the arduino.
+%\tabref{tab:ide/7447/counter_decoder}
 \item {Display Decoder:}
-Use K-maps to obtain the minimized expressions for $a,b,c,d,e,f,g$ in terms of $A,B,C,D$ with  don't care conditions
-\item Verify the display decoder with don't care conditions using arduino
+In \tabref{table:disp_dec},
+use K-maps to obtain the minimized expressions for $a,b,c,d,e,f,g$ in terms of $A,B,C,D$ with  don't care conditions.
+%\ref{fig:dec_counter}  
 \end{enumerate}
 
 
