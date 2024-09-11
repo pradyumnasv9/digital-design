@@ -70,21 +70,24 @@ X+Y' = XY+XY'+X'Y'
 \label{prob:2016/c/6/b}
 Write the Boolean Expression for the result of the logic circuit as shown in Fig.  
 \ref{fig:2016/c/6/b}
+
 \hfill (CBSE 2016)
 \begin{figure}
 \centering
-\includegraphics[width=0.75\columnwidth]{figs/cbse-2016.jpg}
+\includegraphics[width=0.5\columnwidth]{figs/cbse-2016.jpg}
 \caption{}
 \label{fig:2016/c/6/b}
 \end{figure}
 \item Draw the logic circuit of the following Boolean Expression using only NAND Gates.
+
 \hfill (CBSE 2017)
 \label{prob:2017-1/c/6/b}
 		\begin{align*}
 %\label{eq:2017-1/c/6/b}
  XY + YZ
 		\end{align*}
-\item Draw the logic circuit of the following Boolean Expression using only NOR Gates  
+\item Draw the logic circuit of the following Boolean Expression using only NOR Gates.  
+
 \hfill (CBSE 2017)
 \label{prob:2017/c/6/b}
       \begin{align*}
@@ -96,37 +99,6 @@ Write the Boolean Expression for the result of the logic circuit as shown in Fig
 \begin{equation*} 
 (U'+V)(V'+W')
 \end{equation*}
-\item Derive a Canonical POS expression for a Boolean function F, represented by 
-Table \ref{tab:2019/c/6/c}\hfill (CBSE 2019)
-\label{prob:2019/c/6/c}
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|l|l|c|}
-	\hline
-	X&Y&Z&F(X,Y,Z)\\
-	\hline
-	0&0&0&1\\
-	0&0&1&0\\
-	0&1&0&1\\
-	0&1&1&0\\
-	1&0&0&1\\
-	1&0&1&1\\
-	1&1&0&0\\
-	1&1&1&0\\
-	\hline
-\end{tabular}
-\caption{}
-\label{tab:2019/c/6/c}
-\end{table}
-\item For the logic circuit shown in \figref{fig:2000/gate/ec/2/7}, find the simplified Boolean expression for the output. 
-\label{prob:2000/gate/ec/2/7}
-\hfill (GATE EC 2000)
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.75\columnwidth]{figs/2000-gate-ec-2-7.jpg}
-    \caption{}
-\label{fig:2000/gate/ec/2/7}
-\end{figure}
 \item 
 Obtain the Boolean Expression for the logic circuit shown below
 in \figref{fig:1993/gate/ec/4/8}.
@@ -196,47 +168,6 @@ using XNOR logic.
 \label{prob:1999-gate-ec-2-11}
 For a binary half-sub-tractor having two inputs A and B, find the correct set of logical expressions for the outputs $D =A \text{ minus } B$ and $X$=borrow.
 \hfill (GATE EC 1999)
-%
-\item 
-Find $X$ in the following circuit in 
-\figref{fig:2007-gate-ec-43}
-\hfill (GATE EC 2007)
-\label{prob:2007-gate-ec-43}
-\begin{figure}[H]
-\centering
-	\includegraphics[width=0.75\columnwidth]{figs/2007-gate-ec-43.png}
-\caption{}
-\label{fig:2007-gate-ec-43}
-\end{figure}
-\item 
-\label{prob:2007-gate-in-10}
-      A logic circuit implements the boolean function $F=X'.Y+X.Y'.Z'$. It is found that the input combination $X=Y=1$ can never occur. Taking this into account, find a simplified expression for $F$. 
-\hfill (GATE IN 2007)
-\item 
-\label{prob:2010-gate-ec-39}
-Find the Boolean logic realised by the following circuit in 
-\figref{fig:2010-gate-ec-39}.
-
-\hfill (GATE EC 2010)
-\begin{figure}[H]
-\centering
-	\includegraphics[width=0.5\columnwidth]{figs/2010-gate-ec-39.png}
-\caption{}
-\label{fig:2010-gate-ec-39}
-\end{figure}
-\item 
-\label{prob:2011-gate-ec-20}
-Find the logic function implemented by the circuit given below 
-in 
-\figref{fig:2011-gate-ec-20}.
-
-\hfill (GATE EC 2011)
-\begin{figure}[H]
-\centering
-	\includegraphics[width=0.75\columnwidth]{figs/2011-gate-ec-20.png}
-\caption{}
-\label{fig:2011-gate-ec-20}
-\end{figure}
 \item
 \label{prob:2016/gate/in/19}
 Find $F$ in the Digital Circuit given in the figure below
@@ -269,19 +200,6 @@ in \figref{fig:2016/gate/in/19}.
 \end{figure}
 
 
-\item 
-\label{prob:2017-gate-ec-16}
-Find the logic function implemented by the circuit given below 
-in 
-\figref{fig:2017-gate-ec-16}.
-
-\hfill (GATE EC 2017)
-\begin{figure}[H]
-\centering
-	\includegraphics[width=0.5\columnwidth]{figs/2017-gate-ec-16.png}
-\caption{}
-\label{fig:2017-gate-ec-16}
-\end{figure}
 \item 
 \label{prob:2018-gate-ee-14}
 Find the logic function implemented by the circuit given below 
@@ -322,7 +240,7 @@ in
 \caption{}
 \label{fig:2019-gate-ee-36}
 \end{figure}
-
+\iffalse
 \item 
 \label{prob:2018-gate-ec-31}
 Find the logic function implemented by the circuit given below 
@@ -336,25 +254,7 @@ in
 \caption{}
 \label{fig:2018-gate-ec-31}
 \end{figure}
-\item A Boolean digital circuit is composed using two 4-input multiplexers $M1$ and $M2$ and one 2-input multiplexer $M3$ as shown in the 
-    \figref{fig:Multiplexer}.
-	 $X0$–$X7$ are the inputs of the multiplexers $M1$ and $M2$ and could be connected to either $0$ or $1$. The select lines of the multiplexers are connected to Boolean variables $A$, $B$ and $C$ as shown.
-Which one of the following set of values of $(X0, X1, X2, X3, X4, X5, X6, X7)$ will realise the Boolean function 
-$\overline{A} + \overline{A}\overline{C}+A\overline{B}C $ ?
-\hfill(GATE CS 2023)
- \begin{enumerate}
-     \item (1, 1, 0, 0, 1, 1, 1, 0)
-     \item (1, 1, 0, 0, 1, 1, 0, 1)
-     \item (1, 1, 0, 1, 1, 1, 0, 0)
-     \item (0, 0, 1, 1, 0, 1, 1, 1)
- \end{enumerate}
-%
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=0.75\columnwidth]{figs/Multiplexer.png}
-    \caption{Digital Circuit}
-    \label{fig:Multiplexer}
-\end{figure}
+\fi
 \item Select the Boolean function(s) equivalent to $x + yz$, where $x,y$, and $z$ are Boolean variables, and + denotes logical OR  operation.\hfill(GATE EC 2022)
 	\begin{enumerate}[label=(\Alph*)]
 		\item $x + z + {xy}$
@@ -428,21 +328,6 @@ Which of the following Boolean expressions is/are equivalent to $\overline{F}$ ?
 \item $X\bar{Y}+Y\bar{Z}+\bar{X}\bar{Y}\bar{Z}$ 
 \end{enumerate}
 \hfill{(GATE CS 2021)}
-%
-    \item The circut shown in  
-\figref{fig:block_diagram}
-	    comprises of XOR, AND gates and multiplexers.  
-    If all the inputs $P, Q, R, S$ and $T$ are applied simultaneously and held constant, find $Y$.
-
-\hfill(GATE EC 2021)  
-\begin{figure}[H]
-	\centering
-	\resizebox{0.75\columnwidth}{!}{
-\input{figs/figsh.tex}
-	}
-\caption{} 
-\label{fig:block_diagram}
-\end{figure}
 \item  The following combination of logic gates
 in
 		      \figref{fig:GATE PH 2021}
@@ -464,45 +349,6 @@ in
 		      \label{fig:GATE PH 2021}
 	      \end{figure}
 %
-\item Consider the boolean Function $z\brak{a,b,c}$ from 
-			\figref{fig:203} below.
-		Which of the following minterm lists represent the circuit given above?
-	\begin{enumerate}
-		\item $z=\Sigma\brak{0,1,3,7}$
-		\item $z=\Sigma\brak{1,4,5,6,7}$
-		\item $z=\Sigma\brak{2,4,5,6,7}$
-		\item $z=\Sigma\brak{2,3,5}$
-	\end{enumerate}	   
-	\hfill{(GATE CS 2020)}
-%	
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=0.5\columnwidth]{figs/203.png}
-			\caption{}
-			\label{fig:203}
-		\end{figure}
-%
-\item Consider three $4$-variable functions $f_1, f_2, $and $f_3,$ which are expressed in sum-of-minterms as 
-$$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7,11,14}$$. For the following circuit 
-	in 
-	\figref{fig:GATE-CS2019,30},
-	with one AND gate and one XOR gate, the output function $f$ can be expressed as
-		\begin{enumerate}
-		\item $\sum\brak{7,8,11}$
-		\item $\sum\brak{2,7,8,11,14}$
-		\item $\sum\brak{2,14}$
-		\item $\sum\brak{0,2,3,5,6,7,8,11,14,15}$
-		\end{enumerate}
-%
-	\hfill(GATE-CS2019,30)
-	\begin{figure}[H]
-		 \centering
-		 \resizebox{0.5\columnwidth}{!}{%
-			\input{ide/7447/figs/fig2.tex}
-			}
-                 \caption{}
-	\label{fig:GATE-CS2019,30}
-	\end{figure}
 \item In the circuit shown
 	in \figref{fig:GATE-EC2019,14},
 	what are the values of $F$ for $EN=0$ and $EN=1$,  respectively?
@@ -554,31 +400,6 @@ $$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7
 	}
 	\caption{Full Adder}
 	\label{fig:GATE-IN2019,22}
-\end{figure}
-\item The Boolean operation performed by the following  circuit 
-in
-\figref{fig:figure13}
-	at the output $O$ is \rule{1cm}{0.1pt}.
-%
-\begin{enumerate}
-
-            \item  $O=S_1\oplus S_0$ 
-            
-            \item  $O=S_1\overline{\rm S_0}$
-            
-            \item  $O=S_1 + S_0$
-            
-            \item $O=S_0\overline{\rm S _1}$
- \end{enumerate}
-    \hfill (GATE IN 2020)
-%
-\begin{figure}[H]
-	\centering
-	\resizebox{0.75\columnwidth}{!}{%
-\input{ide/7447/figs/fig13.tex}
-	}
-\caption{}
-\label{fig:figure13}
 \end{figure}
 \item  The chip select logic for a certain DRAM chip in a memory system design is shown below
 	in
@@ -692,25 +513,6 @@ in
 \label{fig:gate_ec_2016_43}
 \end{figure}
 %
-\item Consider the Boolean function Z\brak{a,b,c}. Which one of the following minterm lists represents the 
- circuit given below  
- in
-	 \figref{fig:GATE CS 2020}?
- \begin{figure}[H]
-	 \centering
-	 \resizebox{0.75\columnwidth}{!}{%
-\input{ ide/7447/figs/08.tex}
-	 }
-	 \caption{}
-	 \label{fig:GATE CS 2020}
- \end{figure}
-\begin{enumerate}[label=\Alph*.]
- \item $z=\sum{\brak{0,1,3,7}}$
- \item $z=\sum{\brak{1,4,5,6,7}}$
- \item $z=\sum{\brak{2,4,5,6,7}}$
- \item $z=\sum{\brak{2,3,5}}$
-\end{enumerate}
-\hfill (GATE CS 2020)
 %
 \item A $2$-bit flash Analog to Digital Converter (ADC) is given in \figref{EE2016_37_fig1}. The input is $0 \leq V_{IN} \leq 3$ Volts. The expression of the LSB of the output $B_0$ as a boolean function of $X_2,X_1,$ and $X_0$ is 
 \begin{enumerate}
@@ -807,14 +609,216 @@ is
   \item $111001$
 \end{enumerate}
    \hfill(GATE EC 2020)
- \item The Boolean expression $F\brak{X,Y,Z} = \overline{X}Y\overline{Z}+X\overline{Y}\overline{Z}+XY\overline{Z}+XYZ$ converted into the canonical product of sum (POS) form is
- \begin{enumerate}
-     \item $\brak{X+Y+Z}\brak{X+Y+\overline{Z}}\brak{X+\overline{Y}+\overline{Z}}\brak{\overline{X}+Y+\overline{Z}}$
-     \item $\brak{X+\overline{Y}+Z}\brak{\overline{X}+Y+\overline{Z}}\brak{\overline{X}+\overline{Y}+Z}\brak{\overline{X}+\overline{Y}+\overline{Z}}$
-     \item $\brak{X+Y+Z}\brak{\overline{X}+Y+\overline{Z}}\brak{X+\overline{Y}+Z}\brak{\overline{X}+\overline{Y}+\overline{Z}}$
-     \item $\brak{X+\overline{Y}+\overline{Z}}\brak{\overline{X}+Y+Z}\brak{\overline{X}+\overline{Y}+Z}\brak{X+Y+Z}$
+%
+\item In the circuit shown below
+	in
+\figref{prob:gate  ec2023,23 },
+	 $P$ and $Q$ are the inputs. The logical function realized by the circuit 
+is \rule{1cm}{0.1pt}.
+\hfill(GATE EC 2023)
+\begin{figure}[H]
+\centering
+\resizebox{0.5\columnwidth}{!}{%
+\begin{circuitikz}
+\draw (0,0) --(8,0)--(8,8)--(0,8)-- cycle;
+ % Draw the input lines
+ \draw (0,1.6) -- (-2.0,1.6) node [left] {$P$};
+\draw (0,1.6)  (0.6,1.6) node [right] {$I_1$};
+\draw (0,6.4) -- (-2.0,6.4) to[ground](-2,5);
+\draw (-3,5)--(-1,5);
+\draw (-2.7,4.8)--(-1.3,4.8);
+\draw (-2.4,4.6)--(-1.6,4.6);
+\draw (0,6.4) (0.6,6.4) node [right] {$I_0$};
+\draw (3.7,0)  (3.7,0.5) node [right] {$Sel$};
+\draw(4,0)--(4,-2)--cycle;(-4,-2)--cycle;
+\draw(-2,-2)--(4,-2)--cycle;
+\draw (-0.8,-2)-- (-2,-2) node [left] {$Q$};
+    
+ % Draw the output line
+\draw (8,4.0) -- (9,4.0) node [right] {Y};
+% Draw the multiplexer symbol
+\draw (3.7,4.0)  node{$2$};
+\draw (4.0,4.0)  node{x};
+\draw (4.3,4.0)  node{$1$};
+\draw (4.0,3.4)  node{MUX};
+\end{circuitikz}
+	}
+	\caption{}
+\label{prob:gate  ec2023,23 }
+\end{figure}
+   \begin{enumerate}
+    \item Y=PQ
+    \item Y=P+Q    
+    \item Y= $\overline{PQ}$
+    \item Y= $\overline{P+Q}$
+\end{enumerate}
+\item
+        In \figref{fig:gate23_ph24}, which of the following is correct?
+\hfill(GATE PH 2023)
+\begin{enumerate}
+    \item P = 1, Q = 1; X = 0
+    \item P = 1, Q = 0; X = 0
+    \item P = 0, Q = 1; X = 0
+    \item P = 0, Q = 0; X = 1
+\end{enumerate}
+%
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\columnwidth]{ide/kmap/figs/gate23_ph24.jpg}
+        \caption{}
+        \label{fig:gate23_ph24}
+    \end{figure}  
+\item 
+	\label{prob:2022/gate/in/21}
+	The logic block shown in
+                \figref{fig:circuit}
+	has an output F given by \rule{10mm}{0.4pt}.	
+        \begin{enumerate}
+                \item $ A + B $
+                \item $ A \bar{B} $
+                \item $ A + \bar{B} $
+                \item $ \bar{B} $
+        \end{enumerate}
+		\hfill(GATE IN 2022)
+	\begin{figure}[H]
+                \centering
+		\resizebox{0.5\columnwidth}{!}{%
+                \begin{circuitikz}
+                        \draw
+                        (0,0) 
+                        node[label=left:$B$] {}
+                        -- (7,0)
+                        (3,0.75) 
+                        node[not port, anchor=out, scale=0.75] (not1) {}
+                        (1,0) to[short, *-] (1,0.75) -- (not1.in)
+                        (0,-2) node[label=left:$A$] {} -- (7,-2)
+                        (3,-1.25) node[not port, anchor=out, scale=0.75] (not2) {}
+                        (1,-2) to[short, *-] (1,-1.25) -- (not2.in)
+                        (3,0.75) -- (7,0.75)
+                        (3,-1.25) -- (7,-1.25)
+                        (3.5,-1.25) to[short, *-] (3.5,-3.5)
+                        (3.5,-3.5) node[nor port, rotate=270, anchor=in 2] (gate1) {}
+                        (gate1.in 1)
+                        to[short, -*] ++(0,4.25)
+                        (5.5,-2) to[short, *-] (5.5,-3.5)
+                        (5.5,-3.5) node[nor port, rotate=270, anchor=in 2] (gate2) {}
+                        (gate2.in 1)
+                        to[short, -*] ++(0,4.25)
+                        (4.75,-6.5) node[nor port, rotate=270] (gate3) {}
+                        (gate3.in 2) |- (gate1.out)
+                        (gate3.in 1) |- (gate2.out)
+                        (gate3.out) -- (4.75,-7) node[label=below:$F$] {};
+                \end{circuitikz}
+		}
+                \caption{}
+                \label{fig:circuit}
+	\end{figure}
+\item In the circuit shown below in 
+	\figref{fig},
+	 X and Y are digital inputs, and Z is a digital output. The equivalent 
+		circuit is a  
+		\hfill(GATE EE 2019)
+		\label{prob:2019 EE 36}
+    \begin{enumerate}
+        \item NAND gate
+        \item NOR gate
+        \item XOR gate
+        \item XNOR gate
+    \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \resizebox{0.75\columnwidth}{!}{%
+    \begin{circuitikz}[scale=1]
+    % 1st not
+        \draw (0,0) node[not port,scale=0.8 ] (not) {};
+        \draw (3,-0.28) node[and port] (and) {};
+        
+        \draw (not.in 1) -- ++(-1,0) node[left] {$X$};
+        \draw (not.out) -- ++(0,0) coordinate (and.in 1);
+        \draw (not.in 1) -- ++(0,-1.7) node[below] {$ $};
+    % 1st And
+        \draw (and.in 1) -- ++(-1.2,0) node[left] {$ $};
+        \draw (and.in 2) -- ++(-3.3,0) node[left] {$Y$};
+        \draw (and.out) -- ++(0,0) node[right] {$ $};
+
+        \draw (and.in 2) -- ++(-3,0) coordinate (point);
+        \draw (point) -- ++(0,-1.7) -- ++(1,0) node[below] {$ $};
+        \draw (and.out) -- ++(0,-0.47) node[below] {$ $};
+    %2nd not
+        \draw (0,-2.28) node[not port ,scale=0.8] (not) {};
+        \draw (not.in 1) -- ++(-0.8,0) node[left] {$ $};
+        \draw (not.out) -- ++(0,0) coordinate (and.in 2);
+   %2nd ANd
+        \draw (3,-2) node[and port] (and) {};
+        \draw (and.in 1) -- ++(-2.2,0) node[left] {$ $} ;
+        \draw (and.in 2) -- ++(-1.2,0) node[left] {$ $} ;
+        \draw (and.out) -- ++(0,0) node[right] {$ $};
+          \draw (and.out) -- ++(0,0.7) node[above] {$ $};
+    %or
+        \draw (6,-1) node[or port] (or) {};
+        \draw (or.in 1) -- ++(-1.48,0) node[left] {$ $} ;
+        \draw (or.in 2) -- ++(-1.48,0) node[left] {$ $} ;
+        \draw (or.out) -- ++(1,0) node[right] {$Z$};
+     \end{circuitikz}
+	}
+	\caption{ }
+	\label{fig}
+\end{figure}
+\item The minimum number of two-input NAND gates required to implement the following Boolean expression is \underline{\hspace{4cm}}
+\begin{align*}
+Y=\sbrak{A\bar{B}\brak{C+BD}+\bar{A}\bar{B}}C
+\end{align*}
+\hfill(GATE-PH-2022)
+\item The Boolean expression for the shaded 
+regions as shown in 
+\figref{fig:figure12}
+is $\underline{\hspace{2cm}}$.
+\hfill\brak{GATE \enspace IN2020-11}
+
+\begin{figure}[H]
+	\centering
+	\resizebox{0.75\columnwidth}{!}{%
+\input{ide/kmap/figs/fig12.tex}
+	}
+\caption{Venn Diagram}
+\label{fig:figure12}
+\end{figure}
+
+
+\begin{enumerate}
+\item $(A + B)\bullet(\overline{A} + \overline{B})$
+\item $(A + \overline{B})\bullet(\overline{A} + B)$
+\item $(\overline{A} +  B)\bullet
+(\overline{A} + \overline{B})$
+\item $(\overline{A} + \overline{B})\bullet
+(A + \overline{B})$
+\end{enumerate}
+\item The Boolean operation performed by the following  circuit 
+in
+\figref{fig:figure13}
+	at the output $O$ is \rule{1cm}{0.1pt}.
+%
+\begin{enumerate}
+
+            \item  $O=S_1\oplus S_0$ 
+            
+            \item  $O=S_1\overline{\rm S_0}$
+            
+            \item  $O=S_1 + S_0$
+            
+            \item $O=S_0\overline{\rm S _1}$
  \end{enumerate}
-\hfill (GATE EC 2015)
+    \hfill (GATE IN 2020)
+%
+\begin{figure}[H]
+	\centering
+	\resizebox{0.75\columnwidth}{!}{%
+\input{ide/7447/figs/fig13.tex}
+	}
+\caption{}
+\label{fig:figure13}
+\end{figure}
+
 \end{enumerate}
 
 
