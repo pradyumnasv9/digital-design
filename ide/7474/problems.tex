@@ -1,7 +1,6 @@
 \begin{enumerate}[label=\arabic*.,ref=\theenumi]
 %
 \item A counter is constructed with three $D$ flip-flops. The input-output pairs are named $\brak{D_0, Q_0}$, $\brak{D_1, Q_1}$, and $\brak{D_2, Q_2}$, where the subscript $0$ denotes the least significant bit. The output sequence is desired to be the Gray-code sequence $000, 001, 011, 010, 110, 111, 101$, and $100$, repeating periodically. Note that the bits are listed in the $Q_2$  $Q_1$  $Q_0$ format. The combinational logic expression for $D_1$ is
-\hfill(GATE-EE2021,37)
 %
 \begin{enumerate}
     \item $Q_2 Q_1 Q_0$
@@ -9,10 +8,12 @@
     \item $\Bar{Q_2} Q_0 + Q_1 \Bar{Q_0}$
     \item $Q_2 Q_1 + \Bar{Q_2} \Bar{Q_1}$
 \end{enumerate}
+\hfill(GATE EE 2021)
 %
-\item The propagation delay of the exclusive- OR(XOR) gate in the circuit in  
-	\figref{fig:PropagationDelay}
-	is $3$ ns. The propagation delay of all the flip-flops is assumed to be zero. The Clock(clk) frequency provided to the circuit is $500$ MHz.
+\item 
+ The Clock (clk) frequency provided to the circuit 
+in	\figref{fig:PropagationDelay}
+is $500$ MHz.
 %
 	\begin{figure}[H]
     \centering
@@ -22,16 +23,22 @@
     \caption{Propagation Delay}
 	\label{fig:PropagationDelay}
 \end{figure}
-Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =1 1 1$ with $D2=1$,the minimum number of triggering clock edges after which the flip-flop outputs $Q2Q1Q0$ becomes 1 0 0\emph (in integer) is \line(10,0){15}
-
-\hfill(GATE-EC2021,46)
+Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =1 1 1$ with $D2=1$, find the time after which $Q2Q1Q0=1 0 0$. 
+\hfill(GATE EC 2021)
 %
-\item The maximum clock frequency in MHz of a 4-stage ripple counter, utilizing flip-flops, with each flip-flop having a propagation delay of 20 ns, is \rule{1cm}{0.10mm}. (round off to one decimal place)
+\item Implement a 4-stage ripple counter utilizing flip-flops.
 \label{gate-ee-2022-29}
 \hfill (GATE EE 2022)
 %
 \item The digital circuit shown 
 in \figref{fig:GATE IN 2022-1}
+		\hfill (GATE IN 2022)
+\begin{enumerate}
+    \item is a divide-by-5 counter
+    \item is a divide-by-7 counter
+    \item is a divide-by-8 counter
+    \item does not function as a counter due to disjoint cycles of states 
+\end{enumerate}
 %
 	\begin{figure}[H]
     \centering
@@ -84,18 +91,11 @@ logic ports/scale=0.5
     \caption{}
 	\label{fig:GATE IN 2022-1}
 \end{figure}
-\begin{enumerate}[label=(\Alph*)]
-    \item is a divide-by-5 counter
-    \item is a divide-by-7 counter
-    \item is a divide-by-8 counter
-    \item does not function as a counter due to disjoint cycles of states 
-\end{enumerate}
-\hfill{GATE IN 2022}
-\item The propogation delay of the exclusive-OR(XOR) gate in the circuit in 
-	\figref{fig:GATE EC 2021}
-	is 3ns. The propogation delay of all the flip-flops is assumed to be zero. The clock(Clk) frequency provided to the circuit is 500MHz.
+\item In the circuit in 
+	\figref{fig:GATE EC 2021},
 \label{prob:gate-ec-46.2021}
-
+the clock(Clk) frequency provided to the circuit is 500MHz.
+Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =111$ with $D2=1$, fine the time after which $Q2Q1Q0 = 1 0 0$. 
 \hfill (GATE EC 2021)
 %
 	\begin{figure}[H]
@@ -145,15 +145,14 @@ logic ports/scale=0.5
 	\label{fig:GATE EC 2021}
 \end{figure}
 
-Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =111$ with $D2=1$,the minimum number of triggering clock edges after which the flip-flop outputs $Q2Q1Q0$ becomes 1 0 0\emph{(in integer)} is \line(1,0){12.5} 
 
 \item  
 \label{prob:gate IN 17}
 For the $3$-bit binary counter shown in 
 \figref{fig:lcd}, the output increments at every positive 
 transition in the clock (CLK). Assume ideal diodes and the starting state of the counter as 
-$000$. If output high is $1 V$ and output low is $0 V$, the current $I$(in mA) flowing through the 
-$50 \Omega$ resistor during the $5$th clock cycle is (up to one decimal place)
+$000$. If output high is $1 V$ and output low is $0 V$, find the current $I$ (in mA) flowing through the 
+$50 \Omega$ resistor during the $5$th clock cycle (up to one decimal place).
 \hfill(GATE IN 2018)
 \begin{figure}[H]
 \centering
@@ -165,6 +164,7 @@ $50 \Omega$ resistor during the $5$th clock cycle is (up to one decimal place)
 \label{prob:gate CS 22}
 Consider the sequential circuit shown in \figref{fig:wert}, where both flip-flops used are positive
     edge-triggered D flip-flops.
+The number of states in the state transition diagram of this circuit that have a transition back to the same state on some value of ``in" is \rule{1cm}{0.1pt}.
 \begin{figure}[H]
         \centering      
         \includegraphics[width=0.75\columnwidth]{ide/7474/figs/wert.jpg}
@@ -172,11 +172,12 @@ Consider the sequential circuit shown in \figref{fig:wert}, where both flip-flop
         \label{fig:wert}
     \end{figure}
 %
-The number of states in the state transition diagram of this circuit that have a transition back to the same state on some value of ''in'' is \rule{30pt}{1pt}.
    \hfill(GATE IN 2018)
-   \item The synchronous sequential circuit shown below 
+   \item Implement the synchronous sequential circuit shown below 
 in \figref{fig:gate EC 2023}
-	   works at a clock frequency of $1 GHz$. The throughput, in $Mbits/s$,and the latency, in $ns$, respectively, are 
+	   with a clock frequency of $500 Hz$. 
+\hfill(GATE EC 2023)
+\label{prob:GATE EC 2023}
 	\begin{figure}[H]
     \centering
     \resizebox{0.75\columnwidth}{!}{%
@@ -227,18 +228,9 @@ in \figref{fig:gate EC 2023}
 		\caption{}
 \label{fig:gate EC 2023}
 \end{figure}
-
-    \begin{enumerate}
-        \item $1000, 3$
-         \item $333.33, 1$
-          \item $2000, 3$
-           \item $333.33 , 3$
-    \end{enumerate}
-\hfill(GATE EC 2023)
-\label{prob:GATE EC 2023}
 \item In a given sequential circuit
 	in \figref{fig:GATE EC 2023},
-	 initial states are $Q1 = 1$ and $Q2 = 0$. For a clock frequency of $1 MHz$, the frequency of signal $Q2$ in kHz, is(rounded off to the nearest integer)
+	 initial states are $Q1 = 1$ and $Q2 = 0$. For a clock frequency of $1 MHz$, find the frequency of signal $Q2$ in kHz (rounded off to the nearest integer).
    % 
 	\begin{figure}[H]
     \centering
