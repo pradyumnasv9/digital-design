@@ -59,7 +59,8 @@ while(!(SysTick->CTRL & 0x00010000));
 is the COUNTFLAG.  The \textbf{while} loop will stop once COUNTFLAG = 0. The while loop is used for the delay.
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/systick_ctrl.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/systick_ctrl.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/systick_ctrl}
 \end{center}
 \caption{Control Register (CTRL)}
 \label{fig:systick_ctrl}
@@ -95,7 +96,8 @@ RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
 TIM1->SMCR  = 0;
 \end{lstlisting}
 \begin{figure}[!ht]
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/smcr.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/smcr.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/smcr}
 \caption{Slave Mode Control Register (SMCR)}
 \label{fig:smcr}
 \end{figure}
@@ -106,7 +108,8 @@ TIM1->CR1 	= 0x0001;
 \solution Fig. \ref{fig:cr1} shows the control register 1 (CR1). CEN=1 enables the counter.
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/cr1.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/cr1.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/cr1}
 \end{center}
 \caption{Control Register 1 (CR1)}
 \label{fig:cr1}
@@ -123,7 +126,8 @@ TIM1\_CLK = \frac{HSI\_CLK}{TIM1->PSC + 1} = \frac{8000000}{4000}
 Fig. \ref{fig:psc} shows the TIM1$->$PSC (prescalar) register.
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/psc.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/psc.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/psc}
 \end{center}
 \caption{Prescalar (PSC)}
 \label{fig:psc}
@@ -170,7 +174,8 @@ lead to
 TIM1$->$RCR keeps track of the number of times the counter has overflowed. Fig. \ref{fig:rcr} shows the repetition counter register.
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/rcr.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/rcr.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/rcr}
 \end{center}
 \caption{Repition Counter (RCR)}
 \label{fig:rcr}
@@ -181,7 +186,8 @@ TIM1$->$RCR keeps track of the number of times the counter has overflowed. Fig. 
 \solution The status register (SR) is shown in Fig. \ref{fig:sr}. The UIF flag is 1 if the RCR overflows.
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/sr.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/sr.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/sr}
 \end{center}
 \caption{Staus Register (SR)}
 \label{fig:sr}
@@ -221,7 +227,8 @@ TIM2->SMCR	= 0x0007;//TS = 000, SMS = 111
 %
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=\columnwidth]{./stm32/timers/figs/cr2.eps}
+%\includegraphics[width=\columnwidth]{./stm32/timers/figs/cr2.eps}
+\includegraphics[width=\columnwidth]{stm32/timers/figs/cr2}
 \end{center}
 \caption{Control Register 2 (CR2)}
 \label{fig:cr2}

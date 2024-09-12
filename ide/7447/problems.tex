@@ -66,18 +66,6 @@ Verify the following using Boolean Laws
 %\label{eq:2015/c/6/a}
 X+Y' = XY+XY'+X'Y'
 		\end{align*}
-\item 
-\label{prob:2016/c/6/b}
-Write the Boolean Expression for the result of the logic circuit as shown in Fig.  
-\ref{fig:2016/c/6/b}
-
-\hfill (CBSE 2016)
-\begin{figure}
-\centering
-\includegraphics[width=0.5\columnwidth]{figs/cbse-2016.jpg}
-\caption{}
-\label{fig:2016/c/6/b}
-\end{figure}
 \item Draw the logic circuit of the following Boolean Expression using only NAND Gates.
 
 \hfill (CBSE 2017)
@@ -99,6 +87,18 @@ Write the Boolean Expression for the result of the logic circuit as shown in Fig
 \begin{equation*} 
 (U'+V)(V'+W')
 \end{equation*}
+\item 
+\label{prob:2016/c/6/b}
+Write the Boolean expression for the result of the logic circuit as shown in Fig.  
+\ref{fig:2016/c/6/b}
+
+\hfill (CBSE 2016)
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\columnwidth]{figs/cbse-2016.jpg}
+\caption{}
+\label{fig:2016/c/6/b}
+\end{figure}
 \item 
 Obtain the Boolean Expression for the logic circuit shown below
 in \figref{fig:1993/gate/ec/4/8}.
@@ -198,21 +198,6 @@ in \figref{fig:2016/gate/in/19}.
 	\caption{}
 \label{fig:2016/gate/in/19}
 \end{figure}
-
-
-\item 
-\label{prob:2018-gate-ee-14}
-Find the logic function implemented by the circuit given below 
-in 
-\figref{fig:2018-gate-ee-14}
-
-\hfill (GATE EE 2018)
-\begin{figure}[H]
-\centering
-	\includegraphics[width=0.5\columnwidth]{figs/2018-gate-ee-14.png}
-\caption{}
-\label{fig:2018-gate-ee-14}
-\end{figure}
 \item 
 \label{prob:2018-gate-CS-4}		
 Let $\oplus$ and $\odot$ denote the Exclusive OR and Exclusive NOR operations, respectively.Which one of the following is NOT CORRECT ?
@@ -226,6 +211,34 @@ Let $\oplus$ and $\odot$ denote the Exclusive OR and Exclusive NOR operations, r
     \item $\overline{P} \oplus \overline{Q}$ = $ P \oplus Q $
     \item $(P \oplus \overline{P}) \oplus Q$ = $(P \odot \overline{P}) \odot \overline{Q}$
 \end{enumerate}
+\item Select the Boolean function(s) equivalent to $x + yz$, where $x,y$, and $z$ are Boolean variables, and + denotes logical OR  operation.\hfill(GATE EC 2022)
+	\begin{enumerate}[label=(\Alph*)]
+		\item $x + z + {xy}$
+		\item ${(x + y)}{(x + z)}$
+		\item $x + {xy} + {yz}$
+		\item $x + {xz} + {xy}$
+	\end{enumerate}
+\item 
+Consider a Boolean gate $D$ where the output $Y$ is related to the inputs $A$ and $B$ as $Y = A + B$, where + denotes logical OR operation. The Boolean inputs 0 and 1 are also available separately. Using instances of only D gates and inputs 0 and 1, select the correct option(s).\hfill{(GATE EC 2022)}
+\begin{enumerate}
+\item  NAND logic can be implemented
+\item  OR logic cannot be implemented
+\item  NOR logic can be implemented
+\item  AND logic cannot be implemented.
+\end{enumerate}
+\item 
+\label{prob:2018-gate-ee-14}
+Find the logic function implemented by the circuit given below 
+in 
+\figref{fig:2018-gate-ee-14}
+
+\hfill (GATE EE 2018)
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.5\columnwidth]{figs/2018-gate-ee-14.png}
+\caption{}
+\label{fig:2018-gate-ee-14}
+\end{figure}
 %\end{samepage}
 \item 
 \label{prob:2019-gate-ee-36}
@@ -240,28 +253,6 @@ in
 \caption{}
 \label{fig:2019-gate-ee-36}
 \end{figure}
-\iffalse
-\item 
-\label{prob:2018-gate-ec-31}
-Find the logic function implemented by the circuit given below 
-in 
-\figref{fig:2018-gate-ec-31}
-
-\hfill (GATE EC 2018)
-\begin{figure}[H]
-\centering
-	\includegraphics[width=0.75\columnwidth]{figs/2018-gate-ec-31.png}
-\caption{}
-\label{fig:2018-gate-ec-31}
-\end{figure}
-\fi
-\item Select the Boolean function(s) equivalent to $x + yz$, where $x,y$, and $z$ are Boolean variables, and + denotes logical OR  operation.\hfill(GATE EC 2022)
-	\begin{enumerate}[label=(\Alph*)]
-		\item $x + z + {xy}$
-		\item ${(x + y)}{(x + z)}$
-		\item $x + {xy} + {yz}$
-		\item $x + {xz} + {xy}$
-	\end{enumerate}
  \item Which one of the following options is CORRECT for the given circuit 
 			in \figref{fig:xxxx}?
 	 \hfill(GATE PHYSICS 2023)
@@ -278,14 +269,6 @@ in
 		\item P = $0$, Q = $1$ ; X = $0$
 		\item P = $0$, Q = $0$ ; X = $1$
 	\end{enumerate}
-\item 
-Consider a Boolean gate $D$ where the output $Y$ is related to the inputs $A$ and $B$ as $Y = A + B$, where + denotes logical OR operation. The Boolean inputs 0 and 1 are also available separately. Using instances of only D gates and inputs 0 and 1, select the correct option(s).\hfill{(GATE EC 2022)}
-\begin{enumerate}
-\item  NAND logic can be implemented
-\item  OR logic cannot be implemented
-\item  NOR logic can be implemented
-\item  AND logic cannot be implemented.
-\end{enumerate}
 %
 \item Let $R1$ and $R2$ be two $4$-bit registers that store numbers in $2$’s complement form.
 For the operation $R1+R2$, which one of the following values of $R1$ and $R2$ gives an
@@ -442,6 +425,24 @@ in
 \end{enumerate}
 	\end{multicols}
 %
+\item $A$ and $B$ are logical inputs and $X$ is the logical output shown in 
+\figref{fig:gate_in_2017_30}.
+	The output $X$ is related to $A$ and $B$ by 
+\begin{enumerate}
+\item $X = \overline{A}B + \overline{B}A$
+\item $X = AB + \overline{B}A$
+\item $X = AB + \overline{B}\overline{A}$
+\item $X = \overline{A}\overline{B} + \overline{B}A$
+\end{enumerate}
+\hfill (GATE IN 2017)
+\begin{figure}[H]
+\centering
+\resizebox{0.75\columnwidth}{!}{%
+\input{ide/7447/figs/gate_in_2017_30.tex}
+	}
+\caption{}
+\label{fig:gate_in_2017_30}
+\end{figure}
 % 
 \item 
 Which one the following is not a valid identity?
@@ -465,33 +466,6 @@ Which one the following is not a valid identity?
 			\item Neither $S_1$ nor $S_2$ is a tautology.
 		\end{enumerate}
 		                                          \hfill(GATE CS 2021)
-\item A 3-input majority gate is defined by the logic function 
-	$$M(a, b, c) = ab + bc + ca.$$ Which one of the following gates is represented by the function $$M\overline{(M(a, b, c)}, M(a, b, \overline{c}), c)?$$
-\begin{enumerate}
-    \item 3-input NAND gate 
-    \item 3-input XOR gate 
-    \item 3-input NOR gate 
-    \item 3-input XNOR gate 
-\end{enumerate}
-    \hfill(GATE EC 2015)
-\item $A$ and $B$ are logical inputs and $X$ is the logical output shown in 
-\figref{fig:gate_in_2017_30}.
-	The output $X$ is related to $A$ and $B$ by 
-\begin{enumerate}
-\item $X = \overline{A}B + \overline{B}A$
-\item $X = AB + \overline{B}A$
-\item $X = AB + \overline{B}\overline{A}$
-\item $X = \overline{A}\overline{B} + \overline{B}A$
-\end{enumerate}
-\hfill (GATE IN 2017)
-\begin{figure}[H]
-\centering
-\resizebox{0.75\columnwidth}{!}{%
-\input{ide/7447/figs/gate_in_2017_30.tex}
-	}
-\caption{}
-\label{fig:gate_in_2017_30}
-\end{figure}
 \item The functionality implemented by the circuit below 
 in
 \figref{fig:gate_ec_2016_43}
@@ -513,6 +487,15 @@ in
 \label{fig:gate_ec_2016_43}
 \end{figure}
 %
+\item A 3-input majority gate is defined by the logic function 
+	$$M(a, b, c) = ab + bc + ca.$$ Which one of the following gates is represented by the function $$M\overline{(M(a, b, c)}, M(a, b, \overline{c}), c)?$$
+\begin{enumerate}
+    \item 3-input NAND gate 
+    \item 3-input XOR gate 
+    \item 3-input NOR gate 
+    \item 3-input XNOR gate 
+\end{enumerate}
+    \hfill(GATE EC 2015)
 %
 \item A $2$-bit flash Analog to Digital Converter (ADC) is given in \figref{EE2016_37_fig1}. The input is $0 \leq V_{IN} \leq 3$ Volts. The expression of the LSB of the output $B_0$ as a boolean function of $X_2,X_1,$ and $X_0$ is 
 \begin{enumerate}
@@ -543,30 +526,15 @@ the number of distinct values of $X_3X_2X_1X_0$ (out of the $16$ possible values
 	\caption{}
 \label{fig:GATE-EE 2018,47}
 \end{figure}
-\item In the logic circuit shown in  
-\figref{fig:GATE-EE 2018,14},
-	$Y$ is given by
-\hfill(GATE EE 2018)
-\begin{figure}[H]
-\centering
-\resizebox{0.5\columnwidth}{!}{%
-\input{ide/7447/figs/gateEE18.tex}
-	}
-	\caption{}
-\label{fig:GATE-EE 2018,14}
-\end{figure}
-\begin{enumerate}
-    \item $Y = ABCD$
-    \item $Y = ( A + B)(C + D) $
-    \item $Y = A +B +C+ D$
-    \item $Y = AB+CD $
-    
-\end{enumerate}
-
 \item In the circuit shown in 
 \figref{fig:GATE-EC 2014,15},
  if $C = 0$, the expression for $Y$ is
-
+\begin{enumerate}
+    \item $Y= A\overline{B}+ \overline{A}B $ 
+    \item $Y=A+B$
+    \item $Y=\overline{A}+\overline{B}$
+    \item $Y=AB$
+\end{enumerate}
 \hfill (GATE EC 2014)
 \begin{figure}[H]
 \centering
@@ -576,15 +544,34 @@ the number of distinct values of $X_3X_2X_1X_0$ (out of the $16$ possible values
 	\caption{}
 \label{fig:GATE-EC 2014,15}
 \end{figure}
+\item In the logic circuit shown in  
+\figref{fig:GATE-EE 2018,14},
+	$Y$ is given by
+\hfill(GATE EE 2018)
 \begin{enumerate}
-    \item $Y= A\overline{B}+ \overline{A}B $ 
-    \item $Y=A+B$
-    \item $Y=\overline{A}+\overline{B}$
-    \item $Y=AB$
+    \item $Y = ABCD$
+    \item $Y = ( A + B)(C + D) $
+    \item $Y = A +B +C+ D$
+    \item $Y = AB+CD $
 \end{enumerate}
+\begin{figure}[H]
+\centering
+\resizebox{0.5\columnwidth}{!}{%
+\input{ide/7447/figs/gateEE18.tex}
+	}
+	\caption{}
+\label{fig:GATE-EE 2018,14}
+\end{figure}
+%
 \item The logic function $f\brak{X,Y}$ realised by the given circuit in
 \figref{fig:GATE-EC 2018,8}
 is
+\begin{enumerate}
+    \item NOR
+    \item AND
+    \item NAND
+    \item XOR
+\end{enumerate}
 \hfill (GATE EC 2018)
 \begin{figure}[H]
 \centering
@@ -594,12 +581,6 @@ is
 	\caption{}
 \label{fig:GATE-EC 2018,8}
 \end{figure}
-\begin{enumerate}
-    \item NOR
-    \item AND
-    \item NAND
-    \item XOR
-\end{enumerate}
 %
 \item $P, Q$ and $R$ are the decimal integers corresponding to the  $4$-bit binary number  $1100$ considered in single magnitude, $1$'s complement and $2$'s complement representations, respectively. The $6$-bit $2$'s complement representation of $\brak{P + Q + R}$ is
 \begin{enumerate}
@@ -616,6 +597,12 @@ is
 	 $P$ and $Q$ are the inputs. The logical function realized by the circuit 
 is \rule{1cm}{0.1pt}.
 \hfill(GATE EC 2023)
+   \begin{enumerate}
+    \item Y=PQ
+    \item Y=P+Q    
+    \item Y= $\overline{PQ}$
+    \item Y= $\overline{P+Q}$
+\end{enumerate}
 \begin{figure}[H]
 \centering
 \resizebox{0.5\columnwidth}{!}{%
@@ -646,12 +633,6 @@ is \rule{1cm}{0.1pt}.
 	\caption{}
 \label{prob:gate  ec2023,23 }
 \end{figure}
-   \begin{enumerate}
-    \item Y=PQ
-    \item Y=P+Q    
-    \item Y= $\overline{PQ}$
-    \item Y= $\overline{P+Q}$
-\end{enumerate}
 \item
         In \figref{fig:gate23_ph24}, which of the following is correct?
 \hfill(GATE PH 2023)
@@ -764,10 +745,11 @@ is \rule{1cm}{0.1pt}.
 	\caption{ }
 	\label{fig}
 \end{figure}
-\item The minimum number of two-input NAND gates required to implement the following Boolean expression is \underline{\hspace{4cm}}
+\item The minimum number of two-input NAND gates required to implement the Boolean expression 
 \begin{align*}
 Y=\sbrak{A\bar{B}\brak{C+BD}+\bar{A}\bar{B}}C
 \end{align*}
+is \rule{1cm}{0.1pt}.
 \hfill(GATE-PH-2022)
 \item The Boolean expression for the shaded 
 regions as shown in 
