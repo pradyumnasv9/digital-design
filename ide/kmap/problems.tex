@@ -753,7 +753,7 @@ OUT
 %
 \item The output F of the digital circuit shown 
 	in \figref{fig:GATE IN 2022}
-	can be written in the form(s)\rule{2cm}{0.5pt}
+	can be written in the form(s) \rule{1cm}{0.1pt}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.75\columnwidth]{figs/gate_in_2022_q23.jpg}
@@ -775,16 +775,16 @@ OUT
 \item $a_1a_0\bar{b_0}+a_0\bar{b_0}\bar{b_1}$
 \item $a_1\bar{b_1}+a_1a_0\bar{b_0}+a_0\bar{b_0}b_1$
 \end{enumerate}
-\hfill(GATE IN-2022)
+\hfill(GATE IN 2022)
 %
 \item In the circuit shown below in 
 \figref{fig:fig-1.png},
  $Y$ is a $2$-bit $(Y_1Y_o)$ output of the combinational logic. What is the 
 maximum value of $Y$ for any given digital inputs, $A_1A_0$ and $B_1B_0$ ?
-\hfill(GATE-BM2021)
+\hfill(GATE BM 2021)
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\columnwidth]{ide/kmap/figs/Fig-1.png}
+\includegraphics[width=0.5\columnwidth]{ide/kmap/figs/Fig-1.png}
 \caption{}
 \label{fig:fig-1.png}
 \end{figure}
@@ -836,10 +836,12 @@ maximum value of $Y$ for any given digital inputs, $A_1A_0$ and $B_1B_0$ ?
 
 \item A $ 4\times1$ multiplexer with two selector lines is used to realize a Boolean function $F$ having four Boolean variables $X, Y, Z$ and $W$ as shown below
 in  \figref{fig:multiplexerwithtwoselectionliness}.
-	 $S_0$ and $S_1$ denote the least significant bit $\brak{LSB}$ and most significant bit $\brak{MSB}$ of the selector lines of the multiplexer respectively.$I_0, I_1, I_2,I_3$ Is are the input lines of the multiplexer.\hfill(GATE-IN2021,35)
+	 $S_0$ and $S_1$ denote the least significant bit $\brak{LSB}$ and most significant bit $\brak{MSB}$ of the selector lines of the multiplexer respectively. $I_0, I_1, I_2,I_3$ are the input lines of the multiplexer.
+
+	 \hfill(GATE IN 2021)
   \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\columnwidth]{figs/kmapsmall.jpg}
+  \includegraphics[width=0.4\columnwidth]{figs/kmapsmall.jpg}
   \caption{Multiplexer}
   \label{fig:multiplexerwithtwoselectionliness}
 \end{figure}
@@ -854,7 +856,7 @@ in  \figref{fig:multiplexerwithtwoselectionliness}.
 \item The output expression for the Karnaugh map shown below in
                                 \figref{fig:GATE-EE2019,35}
 				is
-                                \hfill(GATE-EE2019,35)
+                                \hfill(GATE EE 2019)
 		\begin{figure}[H]
             \centering		
    		\input{ide/kmap/figs/fig4.tex}
@@ -871,16 +873,36 @@ in  \figref{fig:multiplexerwithtwoselectionliness}.
 \item The output expression of the Karnaugh map shown below in
 \figref{fig:k-map-E}
 is
-				\hfill(GATE EE-2017, 36)
 
+				\hfill(GATE EE 2017)
+\begin{figure}[H]
+	\centering
+\resizebox {0.5\columnwidth} {!} {
+	\begin{karnaugh-map}[4][4][1][][]
+
+		\maxterms{0,1,2,3,5,7,8,9,10,11,13}
+		\minterms{4,6,12,14,15}
+    \draw[color=black, ultra thin] (0, 4) --
+    node [pos=0.7, above right, anchor=south west] {$CD$} % Y label
+    node [pos=0.7, below left, anchor=north east] {$AB$} % X label
+    ++(135:1);
+%		\implicant{4}{14}
+%		\implicant{1}{7}
+	\end{karnaugh-map}
+}
+\caption{}
+\label{fig:k-map-E}
+\end{figure}
+\iffalse
 \begin{figure}[H]
 \centering
 \input{ide/kmap/figs/kmap_E.tex}
 	\caption{}
 \label{fig:k-map-E}
 \end{figure}
+\fi
 
-\begin{enumerate}[label=\Alph*.]
+\begin{enumerate}
 \item $B\overline{D} + BCD$
 \item $B\overline{D} + AB$
 \item $\overline{B}D + ABC$
@@ -891,7 +913,7 @@ is
 $F(X, Y, Z) = (X' + Y + Z)(X + Y' + Z') (X' + Y + Z') (X'Y'Z' + X' Y Z' + XYZ')$.
 
 Which one of the following is true?
-\hfill(GATE IN2021,31)
+\hfill(GATE IN 2021)
 
 \begin{enumerate}
     \item $F(X, Y, Z) = (X + Y + Z') (X' + Y' + Z')$
@@ -899,55 +921,33 @@ Which one of the following is true?
     \item $F(X, Y, Z) = X'Z' + YZ'$
     \item $F(X, Y, Z) = X'Y'Z + XYZ$
 \end{enumerate}
-\iffalse
-\item 
-	     \figref{fig:GATE EC 2020}
-below shows a multiplier where $S_{1}$ and $S_{0}$ are select lines,$I_{0}$ to $I_{3}$ are the input data lines,$EN$ is the enable line,and $F\brak{P,Q,R}$ is the output. $F$ is 
-		\hfill(GATE EC 2020)
-    \begin{figure}[H]
-             \centering
-	     \includegraphics[width=0.75\columnwidth]{ide/kmap/figs/muxx.jpg}
-	     \caption{}
-	     \label{fig:GATE EC 2020}
-     \end{figure}
-		\begin{enumerate}[label=(\Alph*)]
-			\item $PQ+\bar{Q}R$.
-			\item $P+Q\bar{R}$.
-		        \item $P\bar{Q}R+\bar{P}Q$.
-			\item $\bar{Q}+PR$.
-		\end{enumerate}
-		\fi
 \item The product of sum expression of a Boolean function $F\brak{A,B,C}$ of three variables is given by
-\begin{multline}
-F\brak{A,B,C} = \brak{A + B + \bar{C}}\cdot\brak{A + \bar{B} +\bar{C}}\cdot\brak{\bar{A} + B + C}
-	\\
-	\cdot\brak{\bar{A} + \bar{B} + \bar{C}}
-\end{multline}
-The canonical sum of product expression of F\brak{A,B,C} is  given by
-\hfill (GATE IN 2018)
-  \begin{enumerate}[label=(\Alph*)]                               
+\begin{align*}
+F\brak{A,B,C} = \brak{A + B + \bar{C}}\brak{A + \bar{B} +\bar{C}}\brak{\bar{A} + B + C}
+\brak{\bar{A} + \bar{B} + \bar{C}}
+\end{align*}
+The canonical sum of product expression of $F\brak{A,B,C}$ is  given by
+  \begin{enumerate}                               
 	  \item $\bar{A}\hspace{4pt}\bar{B}\hspace{4pt}C+ \bar{A}\hspace{4pt}B\hspace{4pt}\bar{C} + A\hspace{4pt}\bar{B}\hspace{4pt}C + A\hspace{4pt}B\hspace{4pt}C$
 	  \item $\bar{A}\hspace{4pt}\bar{B}\hspace{4pt}\bar{C} + \bar{A}\hspace{4pt}B\hspace{4pt}\bar{C} + A\hspace{4pt}\bar{B} C + A\hspace{4pt}B\hspace{4pt}\bar{C}$
 	  \item $A\hspace{4pt}B\hspace{4pt} \bar{C} + A\hspace{4pt}\bar{B}\hspace{4pt}\bar{C} + \bar{A}\hspace{4pt}B\hspace{4pt}C + \bar{A}\hspace{4pt}B\hspace{4pt}C + \bar{A}\hspace{4pt}\bar{B}\hspace{4pt}\bar{C}$
 	  \item $\bar{A}\hspace{4pt}\bar{B}\hspace{4pt}\bar{C} + \bar{A}\hspace{4pt}B\hspace{4pt}C +A\hspace{4pt}B\hspace{4pt}\bar{C} + A\hspace{4pt}B\hspace{4pt}\bar{C}+ A\hspace{4pt}B\hspace{4pt}C$
 \end{enumerate}
-
-
-		
+\hfill (GATE IN 2018)
 \item Digital input signals $A, B, C$ with $A$ as the MSB and $C$ as the LSB are used to realize the Boolean function $F=m_0+m_2+m_3+m_5+m_7$, where $m_i$ denotes the $i^{th}$ minterm. In addition, $F$ has a don't care for $m_1$. The simplified expression for $F$ is given by 
-\hfill (GATE-2018,EE,37)
 \begin{enumerate}
     \item $\bar{A} \bar{C}+\bar{B} C+A C$
     \item$\bar{A}+C$
     \item$\bar{C}+A$ 
     \item$\bar{A} C+BC+A\bar{C}$
 \end{enumerate}
+\hfill (GATE EE 2018)
 \item Consider the minterm list form of a Boolean function $F$ given below.
 \begin{align*}
 	F\brak{P,Q,R,S}=\sum m\brak{0,2,5,7,9,11}+d\brak{3,8,10,12,14}
 \end{align*}
-Here,$m$ denotes a minterm and $d$ denotes a don't care term.The number of essential prime implicants of the function $F$ is \underline{\hspace{2cm}} . 	
-	\hfill (GATE-2018,CS,49)
+Here, $m$ denotes a minterm and $d$ denotes a don't care term.The number of essential prime implicants of the function $F$ is  \rule{1cm}{0.1pt}. 	
+	\hfill (GATE CS 2018)
 \item Derive a Canonical POS expression for a Boolean function F, represented by 
 Table \ref{tab:2019/c/6/c}\hfill (CBSE 2019)
 \label{prob:2019/c/6/c}
@@ -984,7 +984,7 @@ Find $X$ in the following circuit in
 \end{figure}
 \item 
 \label{prob:2007-gate-in-10}
-      A logic circuit implements the boolean function $F=X'.Y+X.Y'.Z'$. It is found that the input combination $X=Y=1$ can never occur. Taking this into account, find a simplified expression for $F$. 
+      A logic circuit implements the boolean function $F=X'Y+XY'Z'$. It is found that the input combination $X=Y=1$ can never occur. Taking this into account, find a simplified expression for $F$. 
 \hfill (GATE IN 2007)
 \item 
 \label{prob:2010-gate-ec-39}
@@ -1010,6 +1010,20 @@ in
 	\includegraphics[width=0.75\columnwidth]{figs/2011-gate-ec-20.png}
 \caption{}
 \label{fig:2011-gate-ec-20}
+\end{figure}
+    \item The circut shown in  
+\figref{fig:block_diagram}
+	    comprises of XOR, AND gates and multiplexers.  
+    If all the inputs $P, Q, R, S$ and $T$ are applied simultaneously and held constant, find $Y$.
+
+\hfill(GATE EC 2021)  
+\begin{figure}[H]
+	\centering
+	\resizebox{0.75\columnwidth}{!}{
+\input{figs/figsh.tex}
+	}
+\caption{} 
+\label{fig:block_diagram}
 \end{figure}
 \item 
 \label{prob:2017-gate-ec-16}
@@ -1044,20 +1058,6 @@ $\overline{A} + \overline{A}\overline{C}+A\overline{B}C $ ?
     \label{fig:Multiplexer}
 \end{figure}
 %
-    \item The circut shown in  
-\figref{fig:block_diagram}
-	    comprises of XOR, AND gates and multiplexers.  
-    If all the inputs $P, Q, R, S$ and $T$ are applied simultaneously and held constant, find $Y$.
-
-\hfill(GATE EC 2021)  
-\begin{figure}[H]
-	\centering
-	\resizebox{0.75\columnwidth}{!}{
-\input{figs/figsh.tex}
-	}
-\caption{} 
-\label{fig:block_diagram}
-\end{figure}
 \item Consider the boolean Function $z\brak{a,b,c}$ from 
 			\figref{fig:203} below.
 		Which of the following minterm lists represent the circuit given above?
@@ -1077,7 +1077,7 @@ $\overline{A} + \overline{A}\overline{C}+A\overline{B}C $ ?
 		\end{figure}
 %
 \item Consider three $4$-variable functions $f_1, f_2, $and $f_3,$ which are expressed in sum-of-minterms as 
-$$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7,11,14}$$. For the following circuit 
+$$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7,11,14}.$$ For the following circuit 
 	in 
 	\figref{fig:GATE-CS2019,30},
 	with one AND gate and one XOR gate, the output function $f$ can be expressed as
@@ -1088,7 +1088,7 @@ $$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7
 		\item $\sum\brak{0,2,3,5,6,7,8,11,14,15}$
 		\end{enumerate}
 %
-	\hfill(GATE-CS2019,30)
+	\hfill(GATE CS 2019)
 	\begin{figure}[H]
 		 \centering
 		 \resizebox{0.5\columnwidth}{!}{%
@@ -1136,7 +1136,7 @@ $$f_1 = \sum\brak{0,2,5,8,14}, f_2=\sum\brak{2,3,6,8,14,15}, f_3 = \sum\brak{2,7
 \item
 	 Consider the $2$-bit multiplexer (MUX) shown in  
 		 \figref{fig:MUX}.
-	  For OUTPUT to be the XOR of C and D, th values for $A_0,A_1,A_2$ and $A_3$  are  \rule{1cm}{0.1pt}. \hfill(GATE EC 2022)
+	  For OUTPUT to be the XOR of C and D, the values for $A_0,A_1,A_2$ and $A_3$  are  \rule{1cm}{0.1pt}. \hfill(GATE EC 2022)
 	 \begin{enumerate}
 		\item $A_0=0,A_1=0,A_2=1,A_3=1$
 		\item $A_0=1,A_1=0,A_2=1,A_3=0$
