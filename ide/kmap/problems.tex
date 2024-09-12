@@ -46,46 +46,15 @@ H(P,Q,R,S)=\sum(0,1,2,3,5,7,8,9,10,14,15)
 			F(X,Y,Z,W)=(0,1,4,5,6,7,8,9,11,15)
 		\end{align*}
 \hfill (CBSE 2015)
-		\iffalse
-	\item 
-		Derive a Canonical POS expression for a Boolean function F, represented by the following truth table. 
-\label{prob:2015-1/c/6/c}
-\hfill (CBSE 2015)
-		\begin{table}[H]
-			\centering
-		\begin{tabular}{|c|c|c|c|}
-	\hline
-X & Y & Z & F \\
-\hline
-0 & 0 & 0 & 1 \\  
-\hline
-0 & 0 & 1 & 0 \\ 
-\hline
-0 & 1 & 0 & 0 \\
-\hline
-0 & 1 & 1 & 1 \\
-\hline
-1 & 0 & 0 & 1 \\  
-\hline
-1 & 0 & 1 & 0 \\ 
-\hline
-1 & 1 & 0 & 0 \\
-\hline
-1 & 1 & 1 & 1 \\
-\hline
-\end{tabular}
-		\caption{}
-\label{tab:2015-1/c/6/c}
-\end{table}
-\fi
 	\item 
 \label{prob:2015/c/6/d}
-		Reduce the following Boolean Expression to its simplest form using K-map
+		Reduce the following Boolean Expression to its simplest form using K-map.
+
+\hfill (CBSE 2015)
 		\begin{align*}
 %\label{eq:2015/c/6/d}
 F(X,Y,Z,W)= \sum (0,1,6,8,9,10,11,12,15)
 		\end{align*}
-\hfill (CBSE 2015)
 	\item Reduce the following Boolean Expression to its simplest form using K-map.
 \label{prob:2016/c/6/d}
 		\begin{align*}
@@ -443,8 +412,8 @@ The canonical sum of product representation of $F$ is
 %
 \item
 	\label{prob:2023-gate-ec-9}
-	A function $F(A, B, C)$ defined by three Boolean variables A, B and C when expressed as sum of products is given by \newline$ F = \brak{\overline{A}  \overline{B}  \overline{C}} + \brak{\overline{A}  B  \overline{C}} + \brak{A  \overline{B}  \overline{C}} $
-where, $\overline{A},\overline{B}$ and $\overline{C}$ are the complements of the respective variables.The product of sums (POS) form of the function $F$ is
+	A function $F(A, B, C)$ defined by three Boolean variables A, B and C when expressed as sum of products is given by $$ F = \brak{\overline{A}  \overline{B}  \overline{C}} + \brak{\overline{A}  B  \overline{C}} + \brak{A  \overline{B}  \overline{C}} $$
+where, $\overline{A},\overline{B}$ and $\overline{C}$ are the complements of the respective variables. The product of sums (POS) form of the function $F$ is
 \hfill(GATE EC 2018)
 %
 \begin{enumerate}
@@ -870,7 +839,7 @@ in  \figref{fig:multiplexerwithtwoselectionliness}.
 	 $S_0$ and $S_1$ denote the least significant bit $\brak{LSB}$ and most significant bit $\brak{MSB}$ of the selector lines of the multiplexer respectively.$I_0, I_1, I_2,I_3$ Is are the input lines of the multiplexer.\hfill(GATE-IN2021,35)
   \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\columnwidth]{figs/kmapsmall.jpg}
+  \includegraphics[width=0.5\columnwidth]{figs/kmapsmall.jpg}
   \caption{Multiplexer}
   \label{fig:multiplexerwithtwoselectionliness}
 \end{figure}
@@ -919,14 +888,14 @@ is
 \end{enumerate}
 
 \item A Boolean function $F$ of three variables $X, Y, \text{ and } Z$ is given as 
-$F(X, Y, Z) = (X' + Y + Z)\cdot(X + Y' + Z') \cdot (X' + Y + Z') \cdot (X'Y'Z' + X' Y Z' + XYZ')$.
+$F(X, Y, Z) = (X' + Y + Z)(X + Y' + Z') (X' + Y + Z') (X'Y'Z' + X' Y Z' + XYZ')$.
 
 Which one of the following is true?
 \hfill(GATE IN2021,31)
 
 \begin{enumerate}
-    \item $F(X, Y, Z) = (X + Y + Z') \cdot (X' + Y' + Z')$
-    \item $F(X, Y, Z) = (X'+ Y) \cdot (X + Y' + Z')$
+    \item $F(X, Y, Z) = (X + Y + Z') (X' + Y' + Z')$
+    \item $F(X, Y, Z) = (X'+ Y) (X + Y' + Z')$
     \item $F(X, Y, Z) = X'Z' + YZ'$
     \item $F(X, Y, Z) = X'Y'Z + XYZ$
 \end{enumerate}
