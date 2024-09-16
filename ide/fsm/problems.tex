@@ -3,6 +3,12 @@
   \figref{fig:gate/ec/2020/39/1}.
 		 State $S_0$ is the initial state of the sequence detector. If the output is 1, then
 \hfill (GATE EC 2020)
+\begin{enumerate}
+ \item the sequence 01010 is detected
+ \item the sequence 01011 is detected
+ \item the sequence 01110 is detected
+ \item the sequence 01001 is detected	 
+\end{enumerate}	
 	\begin{figure}[H]
     \centering
     \resizebox{0.75\columnwidth}{!}{%
@@ -11,12 +17,6 @@
   \caption{}
   \label{fig:gate/ec/2020/39/1}		
   \end{figure}	 
-\begin{enumerate}
- \item the sequence 01010 is detected
- \item the sequence 01011 is detected
- \item the sequence 01110 is detected
- \item the sequence 01001 is detected	 
-\end{enumerate}	
 \item A sequence detector is designed to detect precisely 3 digital inputs, with overlapping sequences detectable. For the sequence $(1,0,1)$ and input data $(1,1,0,1,0,0,1,1,0,1,0,1,1,0)$, what is the output of this detector?
 		\begin{enumerate}
 			\item 1,1,0,0,0,0,1,1,0,1,0,0
@@ -26,60 +26,42 @@
 		\end{enumerate}
 		\hfill (GATE EE 2020)
 \item Consider a $3$-bit counter, designed using T flip-flops, as shown below
-in \figref{fig:3bitcounter.jpg}
+in \figref{fig:3bitcounter.jpg}.
+Assuming the initial state of the counter given by $PQR$ as $000$,what are the next three states?
+                 \hfill(GATE-CS2021)
+\begin{enumerate}
+\item $011, 101, 000$
+\item $010, 101, 000$
+\item $010, 101, 000$
+\item $010, 101, 000$
+\end{enumerate}
      \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\columnwidth]{ide/fsm/figs/3bitcounter.jpg}
 \caption{}
 \label{fig:3bitcounter.jpg}
 \end{figure}
-Assuming the initial state of the counter given by $PQR$ as $000$,what are the next three states?
-                 \hfill(GATE-CS2021)
-\begin{enumerate}[label=(\Alph*)]
-\item $011, 101, 000$
-\item $010, 101, 000$
-\item $010, 101, 000$
-\item $010, 101, 000$
-\end{enumerate}
-
-\item The state diagram of a sequence detector is shown below. state S0 is the initial state of the sequence detector. If the output is 1,then
-                                        \hfill(GATE-EC2020,39)
-	\begin{figure}[H]
-    \centering
-    \resizebox{0.75\columnwidth}{!}{%
-    \input{ide/fsm/figs/fig6.tex}
-	}
-    \caption{}
-	\label{fig:GATE EC2020,39}
-\end{figure}
-%    	
-\begin{enumerate}
-\item   the sequence $01010$ is detected.
-\item   the sequence $01011$ is detected.
-\item   the sequence $01110$ is detected.
-\item   the sequence $01001$ is detected.
-\end{enumerate}
 %
 \item The state transition diagram for the circuit shown in 
 	\figref{fig:GATE IN2019,39}
 	is
-                         \hfill(GATE-IN2019,39)
+                         \hfill(GATE IN 2019)
 \begin{figure}[H]
 \centering
-    \resizebox{0.75\columnwidth}{!}{%
+    \resizebox{0.5\columnwidth}{!}{%
 \input{ide/fsm/figs/fig11.tex}
 	}
     \caption{}
 	\label{fig:GATE IN2019,39}
 \end{figure}
-
+%
 \begin{enumerate}
 %% options1
 \item 
 	\figref{fig:GATE IN2019,39-1}
 \begin{figure}[H]
 \centering
-    \resizebox{0.75\columnwidth}{!}{%
+    \resizebox{0.5\columnwidth}{!}{%
 \input{ide/fsm/figs/opt1.tex}
 	}
     \caption{}
@@ -90,7 +72,7 @@ Assuming the initial state of the counter given by $PQR$ as $000$,what are the n
 	\figref{fig:GATE IN2019,39-2}
 \begin{figure}[H]
 \centering
-    \resizebox{0.75\columnwidth}{!}{%
+    \resizebox{0.5\columnwidth}{!}{%
 \input{ide/fsm/figs/opt2.tex}
 	}
     \caption{}
@@ -100,7 +82,7 @@ Assuming the initial state of the counter given by $PQR$ as $000$,what are the n
 	\figref{fig:GATE IN2019,39-3}
 \begin{figure}[H]
 \centering
-    \resizebox{0.75\columnwidth}{!}{%
+    \resizebox{0.5\columnwidth}{!}{%
 \input{ide/fsm/figs/opt3.tex}
 	}
     \caption{}
@@ -110,15 +92,16 @@ Assuming the initial state of the counter given by $PQR$ as $000$,what are the n
 	\figref{fig:GATE IN2019,39-4}
 \begin{figure}[H]
 \centering
-    \resizebox{0.75\columnwidth}{!}{%
+    \resizebox{0.5\columnwidth}{!}{%
 \input{ide/fsm/figs/opt4.tex}
 	}
     \caption{}
 	\label{fig:GATE IN2019,39-4}
 \end{figure}
-
+%
 \end{enumerate}
-
+%
+\iffalse
 \item A sequence detector is designed to detect precisely $3$ digital inputs, with overlapping sequences detectable. For the sequence $\brak{1,0,1}$ and input data $\brak{1,1,0,1,0,0,1,1,0,1,0,1,1,0}$, the output sequence is
 $\hfill\brak{GATE\enspace EE2020-15}$
    \begin{enumerate}
@@ -128,10 +111,19 @@ $\hfill\brak{GATE\enspace EE2020-15}$
   \item $\brak{0,1,0,0,0,0,0,0,1,0,0,0}$
 
 \end{enumerate}
-
+\fi
+%
 \item A finite state machine (FSM) is implemented using the D flip-flops $A$ and $B$, and logic gates, as shown in  
 \figref{fig:ide/fsm/figs/circuit}
 	below. The four possible states of the FSM are $Q_AQ_B = 00, 01, 10$ and	 $11$.  
+Assume that $X_{IN}$ is held at a constant logic level throughout the operation of the FSM. When the FSM is initialized to the state $Q_AQ_B = 00$ and clocked, after a few clock cycles, it starts cycling through
+\hfill{(GATE EC 2017)}
+\begin{enumerate}
+\item all of the four possible states if $X_{in} = 1$
+\item three of the four possible states if $X_{in} = 0$
+\item only two of the four possible states if $X_{in} = 1$
+\item only two of the four possible states if $X_{in} = 0$
+\end{enumerate}
 %
 \begin{figure}[H]
 \centering
@@ -141,14 +133,7 @@ $\hfill\brak{GATE\enspace EE2020-15}$
 	\caption{}
 \label{fig:ide/fsm/figs/circuit}
 \end{figure}
-Assume that $X_{IN}$ is held at a constant logic level throughout the operation of the FSM. When the FSM is initialized to the state $Q_AQ_B = 00$ and clocked, after a few clock cycles, it starts cycling through
-\begin{enumerate}
-\item all of the four possible states if $X_{IN} = 1$
-\item three of the four possible states if $X_{IN} = 0$
-\item only two of the four possible states if $X_{IN} = 1$
-\item only two of the four possible states if $X_{IN} = 0$
-\end{enumerate}
-\hfill{(GATE EC 2017)}
+\iffalse
 \item For the given digital circuit
 in	\figref{fig:Image},
 	 $A = B = 1$. Assume that AND, OR, and NOT gates have propagation delays of $10\mathrm{ns}$,$10\mathrm{ns}$, and $5\mathrm{ns}$ respectively. All lines have zero
@@ -184,13 +169,14 @@ At time $t=T.A(t)=0,B(t)=1 and Z(t)=0.$ When the inputs are changed to $A(t)=1,B
 \item $600$
 \end {enumerate}
 %
+\fi
 \item Find the states in 
 	\figref{fig:GATEEC2020-50}.
 \hfill (GATE EC 2020)
 %
 	\begin{figure}[H]
     \centering
-    \resizebox{0.5\columnwidth}{!}{%
+    \resizebox{0.75\columnwidth}{!}{%
 \input{ide/7474/figs/fig16.tex}
 	}
     \caption{}

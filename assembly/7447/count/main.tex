@@ -1,4 +1,3 @@
-
 %
 We show how to program the 7447 BCD-Seven segment
 display decoder through AVR-Assembly.
@@ -9,7 +8,7 @@ display decoder through AVR-Assembly.
 	%Table \ref{table:assembly/7447/count/7447_ard}.
 \tabref{table:7447_ard}
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/arduino/master/assembly/7447/count/codes/and_or_xor.asm
+assembly/7447/count/codes/and_or_xor.asm
 \end{lstlisting}
 %
 \item Suppose R20=0b00000010, R16=0b00000001.  Explain the following routine
@@ -28,7 +27,7 @@ out PORTD,r16		;writing output to pins 2,3,4,5
 \solution \textbf{rcall} calls for execution of the \textbf{loopw} routine, which shifts R16 by 2 bits to the left and writes R16 to the display through PORTD.
 \item Use the following  routine for finding the complement of a number.
 \begin{lstlisting}
-wget https://raw.githubusercontent.com/gadepall/arduino/master/assembly/7447/count/codes/complement.asm
+assembly/7447/count/codes/complement.asm
 \end{lstlisting}
 \item Write an assembly program for implementing the following equations. Note that ZYXW is the input nibble and DCBA is the output nibble.  Display DCBA on the seven segment display for each input ZYXW from 0-9.
 %

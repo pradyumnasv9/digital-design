@@ -1,26 +1,20 @@
 \begin{enumerate}[label=\arabic*.,ref=\theenumi]
-\item In a given $8$-bit general purpose micro-controller there are following flags. $C$-Carry, $A$-Auxiliary Carry, $O$-Overflow flag, $P$-Parity ($0$ for even, $1$ for odd) $R0$ and $R1$ are the two general purpose registers of the micro-controller.After execution of the following instructions, the decimal equivalent of the binary sequence of the flag pattern $[CAOP]$ will be $\underline{\hspace{1cm}}$.\\
-
-
+\item In a given $8$-bit general purpose micro-controller there are following flags. $C$-Carry, $A$-Auxiliary Carry, $O$-Overflow flag, $P$-Parity ($0$ for even, $1$ for odd) $R0$ and $R1$ are the two general purpose registers of the micro-controller. After execution of the following instructions, the decimal equivalent of the binary sequence of the flag pattern $[CAOP]$ will be \rule{1cm}{0.1pt}.
+\hfill{(EE GATE 2023)}
 \begin{lstlisting}
 MOV R0,+0x60
 MOV R1,+0x46 
 ADD R0,R1
 \end{lstlisting}
-    
-\hfill{(EE GATE 2023)}\\
-
-
 \item 
 Consider the given C-code and its corresponding assembly code, with a few operands U1-U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code.
-
 \begin{lstlisting}
 int a[10],b[10],i;
 //int is 32-bit
 for (i=0;i<10;i++)
 a[i]=b[i]*8;
 \end{lstlisting}
-
+%
 \begin{lstlisting}
 ;r1-r5 are 32-bit integer registers
 ;initialize r1=0,r2=0
@@ -36,11 +30,10 @@ L07:add r1,r1,1
 L08:jmp U4        ;goto U4
 L09:end
 \end{lstlisting}
-
-\item Which one of the following options is a CORRECT replacement 
+Which one of the following options is a CORRECT replacement 
 for operands in the position (U1,U2,U3,U4) in the above 
 assembly code?
-
+%
 \begin{enumerate}
 \item (8,4,1,L02)                      
 \item (3,4,4,L01)
@@ -56,72 +49,62 @@ INX H
 MOV M,A
 HLT
 \end{verbatim}
-At the end of this program, the memory location $2003$H contains the number in decimal $\brak{base 10}$ form $\underline{\hspace{2cm}}$.
-
-$\hfill\brak{GATE\enspace EE2020-54}$
+		At the end of this program, the memory location $2003$H contains the number in decimal form \rule{1cm}{0.1pt}.
+		\hfill (GATE EE 2020)
 \item  Which of the following is the correct binary equivalent of the hexadecimal F6C?
-$\hfill\brak{GATE\enspace PH2020,6}$
-
+	\hfill (GATE PH 2020)
+%
 \begin{enumerate}
   \item  $0110 1111 1100$
   \item $1111 0110 1100$
   \item $1100 0110 1111$
   \item $0110 1100 0111$
-
 \end{enumerate}
 \item
 \label{prob:gate IN 45}
- A portion of an assembly language program written for an $8$-bit microprocessor is given below along with explanations. The code is intended to introduce a software time delay. The processor is driven by a $5$ MHz clock. The time delay (in $\mu$s) introduced by the program is \vspace{12 pt}
-
-
-MVI B, $64$H; Move immediate the given byte into register B. Takes $7$ clock periods.\vspace{12 pt}
-
-
-LOOP: DCR B ; Decrement register B. Affects Flags. Takes $4$ clock periods. \vspace{12 pt}
-
-
-JNZ LOOP ; Jump to address with Label LOOP if zero flag is not set. Takes $10$ clock periods when jump is performed and $7$ clock periods when jump is not performed.
-
+ A portion of an assembly language program written for an $8$-bit microprocessor is given below along with explanations. The code is intended to introduce a software time delay. The processor is driven by a $5$ MHz clock. The time delay (in $\mu$s) introduced by the program is 
 \hfill(GATE IN 2018)
-
-\item A $10\frac{1}{2}$ digit Counter-timer is set in the 'frequency mode' of operation (with $T_s=1s$). For a specific input, the reading obtained is $1000$. Without disconnecting this input, the Counter-timer is changed to operate in the 'Period mode' and the range selected is microseconds ($\mu$s,with $f_s=\SI{1}{\mega\hertz}$).The Counter Will then display
-\hfill(GATE IN 2021)
+\begin{lstlisting}
+MVI B, $64$H; Move immediate the given byte into register B. Takes 7 clock periods.
+LOOP: DCR B ; Decrement register B. Affects Flags. Takes 4 clock periods. 
+JNZ LOOP ; Jump to address with Label LOOP if zero flag is not set. Takes 10 clock periods when jump is performed and 7 clock periods when jump is not performed.
+\end{lstlisting}
+%
+\item A $10\frac{1}{2}$ digit Counter-timer is set in the `frequency mode' of operation (with $T_s=1s$). For a specific input, the reading obtained is $1000$. Without disconnecting this input, the Counter-timer is changed to operate in the `Period mode' and the range selected is microseconds ($\mu$s, with $f_s=\SI{1}{\mega\hertz}$).The Counter will then display
 \begin{enumerate}
   \item $0$
   \item $10$
   \item $100$
   \item $1000$
 \end{enumerate}
+\hfill(GATE IN 2021)
 
-\item Consider three registers $\textbf{R1 ,R2 ,R3}$ that store numbers in $ IEEE-754 $ single precision floating point format. Assume that $\textbf{R1}$ and $\textbf{R2}$ contain the values (in hexadecimal notation) $0\textbf{x}42200000$ and $0\textbf{x}C1200000,$ respectively. If $ \textbf{R3}=\frac{\textbf{R1}}{\textbf{R2}} $, what is the value stored in $\textbf{R3}?$
-\hfill(GATE-EC2021,31)
+\item Consider three registers R1 ,R2 ,R3 that store numbers in  IEEE-754  single precision floating point format. Assume that R1 and R2 contain the values (in hexadecimal notation) 0x42200000 and 0xC1200000, respectively. If  R3=$\frac{\text{R1}}{\text{R2}}$, what is the value stored in R3?
+\hfill(GATE EC 2021)
 \begin{enumerate}
     \item 0x40800000
     \item 0xC0800000
     \item 0x83400000
     \item 0xC8500000
 \end{enumerate}
-
+%
 \item The content of the registers are $R_1 = 25H$, $R_2 = 30H$ and $R_3 = 40H$. The following machine instructions are executed.
-\begin{align*}
-  PUSH \cbrak {R_2}  
-  \\PUSH \cbrak {R_2}
-  \\PUSH \cbrak {R_3} 
-  \\POP \cbrak {R_1} 
-  \\POP \cbrak {R_2} 
-  \\POP \cbrak {R_3} 
-\end{align*}
-
-After execution, the content of registers $R_1$, $R_2$, $R_3$ are
-\hfill(GATE-EC2021,32)
-
+	\begin{lstlisting}
+  PUSH R1  
+  PUSH R2
+  PUSH R3 
+  POP R1 
+  POP R2 
+  POP R3 
+\end{lstlisting}
+%
+After execution, the content of registers R1, R2, R3 are
+\hfill(GATE EC 2021)
+%
 \begin{enumerate}
     \item $R_1 = 40H, R_2 = 30H,R_3 = 25H$
     \item $R_1 = 25H, R_2 = 30H,R_3 = 40H$
     \item $R_1 = 30H, R_2 = 40H,R_3 = 25H$
     \item $R_1 = 40H, R_2 = 25H,R_3 = 30H$
 \end{enumerate}
-
-
-
 \end{enumerate}
