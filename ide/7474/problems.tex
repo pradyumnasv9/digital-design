@@ -14,6 +14,7 @@
 \label{gate-ee-2022-29}
 \hfill (GATE EE 2022)
 %
+\iffalse
 \item 
  The Clock (clk) frequency provided to the circuit 
 in	\figref{fig:PropagationDelay}
@@ -29,6 +30,7 @@ is $500$ MHz.
 \end{figure}
 Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =1 1 1$ with $D2=1$, find the time after which $Q2Q1Q0=1 0 0$. 
 \hfill(GATE EC 2021)
+\fi
 %
 \item In the circuit in 
 	\figref{fig:GATE EC 2021},
@@ -357,7 +359,7 @@ in
 %
 \item In the circuit shown
 	in \figref{fig:GATE-EC2019,25},
-the clock frequency, i.e., the frequency of the clk signal, is 12 KHz. The frequency of the signal at $Q2$ is  \rule{1cm}{0.1pt} KHz.
+the clock frequency is 12 KHz. The frequency of the signal at $Q2$ is  \rule{1cm}{0.1pt} KHz.
 
 		\hfill(GATE EC 2019)
 %%\end{enumerate}
@@ -419,6 +421,7 @@ below uses ideal positive edge-triggered synchronous $J-K$ flip flops with outpu
 	\label{fig:GATE-PH2020,30}
 \end{figure}
 %
+\iffalse
 \item Two T-flip flops are interconnected as shown in 
 	\figref{fig:GATEIN2020-40}.
  The present state of the flip flops are: A = 1, B = 1. The input x is given as $1, 0, 1$ in the next three clock cycles. The decimal equivalent of $\brak{ABy}_{2}$ with A being the MSB and y being the LSB, after the $3_{rd}$ clock cycle is $\underline{\hspace{2cm}}$.
@@ -432,6 +435,7 @@ below uses ideal positive edge-triggered synchronous $J-K$ flip flops with outpu
 	\label{fig:GATEIN2020-40}
 \end{figure}
 %
+\fi
 \item A 2-bit synchronous counter using two J-K flip flops is shown
 in \figref{fig:gate_in_2018_44}.
  The expression for the inputs to the J-K flip flops are also shown in the figure. The output sequence of the counter starting from $Q_{1}Q_{2} = 00$ is
@@ -453,31 +457,14 @@ in \figref{fig:gate_in_2018_44}.
 \label{fig:gate_in_2018_44}
 \end{figure}
 %
-\item For the components in the sequential circuit shown 
-	in 
-	\figref{fig:GATEEC2020-50}
-	below, $t_{\text{pd}}$ is the propagation delay, $t_{\text{setup}}$ is the setup time, and $t_{\text{hold}}$ is the hold time. The maximum clock frequency (rounded off to the nearest integer) at which the given circuit can operate reliably is \underline{\hspace{1cm}}MHZ.
-\hfill{\brak{GATE \enspace EC2020-50}}
-
-	\begin{figure}[H]
-    \centering
-    \resizebox{0.75\columnwidth}{!}{%
-\input{ide/7474/figs/fig16.tex}
-	}
-    \caption{}
-	\label{fig:GATEEC2020-50}
-\end{figure}
-
- \item Which of the following statements is true about digital circuits shown in 
+ \item Which of the following statements is true about digital circuit shown in 
 	\figref{fig:GATE-EE-2018,36}?
- \hfill{(Gate EE-2018,36)}
+ \hfill (GATE EE 2018)
 %
 	\begin{figure}[H]
     \centering
     \resizebox{0.75\columnwidth}{!}{%
 \begin{circuitikz}
-
-
 \draw (0,0)node[left]{$f_{in}$} to[short,*-] (8,0);
 \draw (0.5,0) to (0.5,1);
 \draw (0.5,1) to (1,1);
@@ -522,20 +509,20 @@ in \figref{fig:gate_in_2018_44}.
 \end{figure}
 %
 \begin{enumerate}
-\item It can be used  for dividing the input frequency by $3$ .
-\item  It can be used  for dividing the input frequency by $5$ .
-\item  It can be used  for dividing the input frequency by $7$ .
+\item It can be used  for dividing the input frequency by $3$.
+\item  It can be used  for dividing the input frequency by $5$.
+\item  It can be used  for dividing the input frequency by $7$.
 \item  It cannot be reliably used as frequency divider due to 
- disjoint internal cycles .
+ disjoint internal cycles.
  \end{enumerate}
 %
- \item In the circuit shown below, a positive edge-triggered $D$ Flip-Flop is used for sampling input data $D_{in}$ using clock $CK$. The $XOR$ gate outputs $3.3$ volts for logic HIGH and $0$ volts for logic LOW levels. The data bit and clock periods are equal and the value of $\triangle T/ T_{CK} = 0.15 .$, where the parameters $\triangle T$ and $T_{CK}$ are shown in 
+ \item In the circuit shown below, a positive edge-triggered $D$ Flip-Flop is used for sampling input data $D_{in}$ using clock $CK$. The $XOR$ gate outputs $3.3$ volts for logic HIGH and $0$ volts for logic LOW levels. The data bit and clock periods are equal and the value of $\triangle T/ T_{CK} = 0.15$, where the parameters $\triangle T$ and $T_{CK}$ are shown in 
 	\figref{fig:GATE EC 2018,46}.
  Assume that the Flip-Flop and the $XOR$ gate are ideal.
  If the probability of input data bit ($D_{in}$) transition in each clock period is $0.3$, the average
-    value (in volts, accurate to two decimal places) of the voltage at node $X$, is $..........$.
-
-\hfill (GATE-EC 2018,46)
+    value (in volts, accurate to two decimal places) of the voltage at node $X$, is \rule{1cm}{0.1pt}.
+%
+\hfill (GATE EC 2018)
 	\begin{figure}[H]
     \centering
     \resizebox{0.75\columnwidth}{!}{%
@@ -547,7 +534,9 @@ in \figref{fig:gate_in_2018_44}.
    % 
  \item Assume that all the digital gates in the circuit shown in 
 	\figref{fig:GATE EC 2016}
-are ideal,the resistor $R$=$10k\Omega $ and the supply voltages is $5V$.The $D$ flip-flops $D_1,D_2,D_3,D_4$ and $D_5$ are intialized with logic values $0,1,0,1,$ and $0,$ respectively.The clock has a $30\%$ duty cycle.
+are ideal,the resistor $R$=$10k\Omega $ and the supply voltages is $5V$. The $D$ flip-flops $D_1,D_2,D_3,D_4$ and $D_5$ are intialized with logic values $0,1,0,1,$ and $0,$ respectively. The clock has a $30\%$ duty cycle.
+The average power dissipated in the resistor $R$ is \rule{1cm}{0.1pt}.
+\hfill{(GATE EC 2016)}
 % 
 	\begin{figure}[H]
     \centering
@@ -591,11 +580,7 @@ are ideal,the resistor $R$=$10k\Omega $ and the supply voltages is $5V$.The $D$ 
     \caption{}
 	\label{fig:GATE EC 2016}
 \end{figure}
-
-The average power dissipated $\brak {in mW}$  in the resistor R is 
-\rule{1cm}{1pt}.
-
-\hfill{(GATE EC 2016)}
+\iffalse
 \item The circuit shown in 
 \figref{fig:2019-gate-in-12}
 below uses ideal positive edge-triggered synchronous J-K flip flops with outputs X and Y. If the initial state of the output is X=0 and Y=0, just before the arrival of the first clock pulse, the state of the output just before the arrival of the second clock pulse is
@@ -607,6 +592,7 @@ below uses ideal positive edge-triggered synchronous J-K flip flops with outputs
 \caption{}
 \label{fig:2019-gate-in-12}
 \end{figure}
+\fi
 	\item 		
 		A counter is constructed with three D flip-flops. The input-output pairs are named (D0, Q0), (D1, Q1), and (D2, Q2), where the subscript 0 denotes the least significant bit. The output sequence is desired to be the Gray-code sequence 000, 001, 011, 010, 110, 111, 101, and 100, repeating periodically. Note that the bits are listed in the Q2 Q1 Q0 format. Find the combinational logic expression for D1.
 \label{prob:2021-gate-ee-37}
@@ -628,17 +614,16 @@ is 3ns. The propogation delay of all the flip-flops is assumed to be zero. The c
 %
 Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =111$ with $D2=1$,the minimum number of triggering clock edges after which the flip-flop outputs $Q2Q1Q0$ becomes 1 0 0\emph{(in integer)} is \line(1,0){12.5}
 \hfill (GATE EC 2021)
-\fi
 \item 
 \label{prob:2022-gate-ec-43}
 	 For the circuit shown in  
 \figref{fig:2022-gate-ec-43},
 		the clock frequency is $f_0$ and the duty cycle is $25 \%$. For the signal at the $Q$ output of the Flip-Flop,
 \begin{enumerate}
-	\item frequency of $\frac{f_0}{4}$ and duty cycle is 50$\%$
-	\item frequency of $\frac{f_0}{4}$ and duty cycle is 25$\%$
-	\item frequency of $\frac{f_0}{2}$ and duty cycle is 50$\%$
-	\item frequency of $f_0$ and duty cycle is 25$\%$ \\
+	\item frequency is $\frac{f_0}{4}$ and duty cycle is 50$\%$
+	\item frequency is $\frac{f_0}{4}$ and duty cycle is 25$\%$
+	\item frequency is $\frac{f_0}{2}$ and duty cycle is 50$\%$
+	\item frequency is $f_0$ and duty cycle is 25$\%$ \\
 \end{enumerate}
 \begin{figure}[H]
 	\centering
@@ -649,9 +634,11 @@ Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =111$ with $D2=
 \label{fig:2022-gate-ec-43}
 \end{figure}
 \hfill 	(GATE EC-2022)
+\fi
 \item 
- Two T-flip flops are interconnected as shown in \figref{fig:tff1}. The present state of the flip flops are: $A = 1, B = 1$. The input x is given as $1, 0, 1$ in the next three clock cycles. The decimal equivalent of $(ABy)_{2}$ with A being the MSB and y being the LSB, after the 3\textsuperscript{rd} clock cycle is \rule{12mm}{0.4pt}
+ Two T-flip flops are interconnected as shown in \figref{fig:tff1}. The present state of the flip flops are: $A = 1, B = 1$. The input $x$ is given as $1, 0, 1$ in the next three clock cycles. The decimal equivalent of $(ABy)_{2}$ with A being the MSB and $y$ being the LSB, after the 3\textsuperscript{rd} clock cycle is \rule{1cm}{0.1pt}.
 %
+		\hfill (GATE IN 2020)
 	\begin{figure}[H]
     \centering
     \resizebox{0.75\columnwidth}{!}{%
@@ -660,25 +647,11 @@ Starting from the initial value of the flip-flop outputs $Q2Q1Q0 =111$ with $D2=
 		\caption{}
 		\label{fig:tff1}
 	\end{figure}
-		\hfill (GATE IN 2020)
-%\input{gate/2020/40/tflip-flop.tex }
-\item In the circuit shown below in \figref{fig:image} a positive edge-triggered D flip-flop is used for sampling input data
- using clock CK.The XOR gate outputs 3.3 volts for logic HIGH and 0 volts for logic LOW levels.
-The data bit and clock periods are equal and the value of $ \Delta T / T_{ck} $ = 0.15,where
-the parameters $ \Delta T $ and $ T_ck$ are shown in the figure.Assume  that the Flip and
-the XOR gate are ideal.  
-\begin{figure*}[!ht] 
-	\centering
-    \includegraphics[width=0.75\columnwidth]{figs/image.png} 
-    \caption{}
-    \label{fig:image}
- \end{figure*}
-\label{fig:2018-gate-ec-46}
-
-\hfill(GATE EC 2018)
+		\iffalse
 \item A 2-bit synchronous counter using two J-K flip flops is shown
 	in \figref{fig:enter-label}.
  The expressions for the inputs to the J-K flip flops are also shown in the figure. The output sequence of the counter starting from $Q_1Q_2 = 00$ is 
+\hfill (GATE IN 2018)
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\columnwidth]{figs/question44.png}
@@ -691,11 +664,31 @@ the XOR gate are ideal.
         \item $00\rightarrow01\rightarrow11\rightarrow10\rightarrow00...$
         \item $00\rightarrow10\rightarrow11\rightarrow01\rightarrow00...$
 \end{enumerate}
-\hfill{GATE IN 2018}
-\item A $16$-bit synchronous binary up-counter is clocked with the frequency $\vec{f}_{\text{CLK}}$. The two most significant bits are $\vec{OR}$-ed together to form an output $Y$. Measurements show that $Y$ is periodic, and the duration for which $Y$ remains high in each period is $24$ ms. The clock frequency\underline{\hspace{2cm}}MHz.\\ {(Round off to $2$ decimal places.)}
-\hfill{\brak{GATE \enspace EE2021-22}}
-
-\item \input{gate/2024/42/ques.tex}
+\fi
+\item A $16$-bit synchronous binary up-counter is clocked with the frequency $f_{\text{CLK}}$. The two most significant bits are OR-ed together to form an output $Y$. Measurements show that $Y$ is periodic, and the duration for which $Y$ remains high in each period is $24$ ms. Find the clock frequency.
+	\hfill (GATE EE 2021)
+\item 
+The sequence of states ($Q_1Q_0$) of the given synchronous sequential circuit 
+		in \figref{fig:2024}
+is \rule{1cm}{0.1pt}.
+\hfill (GATE EC 2024)
+%
+	\begin{figure}[H]
+    \centering
+    \resizebox{0.75\columnwidth}{!}{%
+\input{gate/2024/42/fig.tex}
+		}
+		\caption{}
+		\label{fig:2024}
+	\end{figure}
+%
+\begin{enumerate}
+    \item 00 $\to$ 10 $\to$ 11 $\to$ 00
+    \item 11 $\to$ 00 $\to$ 10 $\to$ 01 $\to$ 00
+    \item 01 $\to$ 10 $\to$ 11 $\to$ 00 $\to$ 01
+    \item 00 $\to$ 01 $\to$ 10 $\to$ 00
+\end{enumerate}
+\iffalse
 \item The maximmunm clock frequeccy in MHz of a $4$-stage ripple counter, utilize flip-flops, with each flip-flop having a propagation delay of $20$ ns, is $\rule{2cm}{0.15mm}$.\\
 (\textit{round off to one decimal place})
 \hfill{(GATE EE 20222)}
@@ -737,34 +730,40 @@ in
 \item SRAM Cell
 \item XOR
 \end{enumerate}
-\item A $6{\frac{1}{2}}$ digit time counter is set in the time period mode of operation and range is set as 'ns'. For an input signalthe time-counter displays $1000000$. with the same input signal,The time countr is changed to 'frequency' mode of operation and the range is set as 'HZ'.The display will be show the number$\underline{\hspace{2cm}}$.
-\hfill{\brak{GATE \enspace IN2020-43}}
+\fi
+\item A $6{\frac{1}{2}}$ digit time counter is set in the time period mode of operation and range is set as `ns'. For an input signal the time-counter displays $1000000$. With the same input signal, the time counter is changed to `frequency' mode of operation and the range is set as Hz. The display will be show the number \rule{1cm}{0.1pt}.
+	\hfill (GATE IN 2020)
 \item The two inputs A and B are connected to to an R-S latch via two AND gates as shown in  
        \figref{fig:GATE IN2017,43}.
 If $A=1$ and $B=0$, the output $Q\bar{Q}$ is
-    \begin{figure}[H]
-        \centering
-	\resizebox{0.75\columnwidth}{!}{%
-        \input{ide/7447/figs/fig15.tex}
-	    }
-	    \caption{}
-       \label{fig:GATE IN2017,43}
-       \end{figure}
-       \hfill(GATE IN2017,43)
+       \hfill (GATE IN 2017)
     \begin{enumerate}
    		\item $00$ 
    		\item $10$ 
    		\item $01$ 
    		\item $11$ 
-   
    \end{enumerate}
+    \begin{figure}[H]
+        \centering
+	\resizebox{0.5\columnwidth}{!}{%
+        \input{ide/7447/figs/fig15.tex}
+	    }
+	    \caption{}
+       \label{fig:GATE IN2017,43}
+       \end{figure}
 \item For the fallowing circuit
 \figref{fig:PH2019,36},
  the correct logic values for the entries $X2$ and $Y2$ in the truth table 
 in
 \tabref{tab:PH2019,36}
  are
-\hfill(PH2019,36)
+\hfill (GATE PH 2019)
+   \begin{enumerate}
+\item $1$ and $0$
+\item $0$ and $0$
+\item $0$ and $1$
+\item $1$ and $1$
+\end{enumerate}
 %
 \begin{figure}[H]
         \centering
@@ -774,28 +773,13 @@ in
 	\caption{}
 \label{fig:PH2019,36}
        \end{figure}
-
+%
 		\begin{table}[H]
 			\centering
-			\resizebox{0.75\columnwidth}{!}{%
+			\resizebox{0.5\columnwidth}{!}{%
 			\input{ide/7447/figs/table32.tex}
 			}
 	\caption{}
 \label{tab:PH2019,36}
 		\end{table}
-
-
-
-   \begin{enumerate}
-\item $1$ and $0$
-\item $0$ and $0$
-\item $0$ and $1$
-\item $1$ and $1$
-
-\end{enumerate}
-
-
-
-
-
 \end{enumerate}

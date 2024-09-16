@@ -4,9 +4,9 @@
     
     % Custom pin names
     \node [right,font=] at (FF1.bpin 1) {\textsl{}};
-    \node [left,font=] at (3.8,-7.8) {$\text{t}_{\text{pd}} = 3ns $};
-    \node [left,font=] at (4,-8.2) {$\text{t}_{\text{setup}} = 5ns$};
-    \node [left,font=] at (4,-8.6) {$\text{t}_{\text{hold}} = 1ns$};
+    \node [left,font=] at (3.8,-7.8) {};
+    \node [left,font=] at (4,-8.2) {};
+    \node [left,font=] at (4,-8.6) {};
     \node [left,font=] at (0.8,-9.3) {\textsl{Clk}};
     \draw (FF1.west) ++(0,-0.8) -- ++(0.2,-0.2) -- ++(-0.2,-0.2) -- cycle;
     \draw (FF1.pin 3) -- ++(-1.45,0);
@@ -18,9 +18,9 @@
     % Custom pin names
     \node [right,font=] at (FF2.bpin 1) {\textsl{}};
     \node [right,font=] at (FF1.bpin 1) {\textsl{}};
-    \node [left,font=] at (3.8,-12.4) {$\text{t}_{\text{pd}} = 3ns $};
-    \node [left,font=] at (4,-12.8) {$\text{t}_{\text{setup}} = 5ns$};
-    \node [left,font=] at (4,-13.2) {$\text{t}_{\text{hold}} = 1ns$};
+    \node [left,font=] at (3.8,-12.4) {};
+    \node [left,font=] at (4,-12.8) {};
+    \node [left,font=] at (4,-13.2) {};
     \node [left,font=] at (3.8,-11.3) {$\text{Flip Flop2}$};
     \node [left,font=] at (3.8,-6.8) {$\text{Flip Flop1}$};
 
@@ -29,8 +29,8 @@
     \node[ieeestd xor port] (xor) at (7,-8.0) {};
     
     \draw (FF1.pin 6) -- ++(0.8,0) to[bend right](5.2,-7.5) -- ++ (0.25,0) -- ++ (0,-0.22) -- ++ (0.6,0);
-    \node [left,font=] at (10.0,-7.5) {$\text{t}_{\text{pd}} = 2ns$};
-    \node [left,font=] at (7.7,-7) {$\text{t}_{\text{pd}} = 2ns$};
+    \node [left,font=] at (10.0,-7.5) {};
+    \node [left,font=] at (7.7,-7) {};
     \draw (FF1.pin 1) -- ++(-2,0) -- ++ (0,1.5) -- ++ (5,0) -- ++ (0,-6) -- ++ (-1,0) ;
     %\draw (2,-12) -- ++(-2,0) -- ++ (0,-3) -- ++ (6,0) -- ++ (0,5) -| (NAND.out) ;
     \draw (xor.in 2)-- ++(0,-1)-|(NAND.in 2);
