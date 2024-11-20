@@ -1,0 +1,93 @@
+\subsection{Arduino Droid}
+For flashing the ESP32 through OTG follow the below steps:
+\begin{enumerate}
+	\item Install ArduinoDroid from apkpure.
+	\item Open ArduinoDroid and grant all permissions
+	\item Connect the ESP32 to your phone via USB-OTG and select the board \textbf{DOIT ESP32 DEVKIT V1} in ArduinoDroid using the below path.
+	\begin{lstlisting}
+Settings->Board type->ESP32->DOIT ESP32 DEVKIT V1
+	\end{lstlisting}
+    See \figref{fig:esp32}
+for DOIT ESP32 DEVKIT V1.
+		For ESP32 \textbf{NodeMCU} ( see
+		\figref{fig:nodemcu}),
+	\begin{lstlisting}
+Settings->Board type->ESP32->NodeMCU-32S
+	\end{lstlisting}
+	\item Run the blink program present in the below link
+	\begin{lstlisting}
+esp32/ide/blink/src/main.cpp
+	\end{lstlisting}
+	The in-built led will start blinking.\\
+\end{enumerate}
+\subsection{Platformio}
+	\begin{enumerate}
+	\item In termux excecute the following to generate the bin file.
+	\begin{lstlisting}
+cd esp32/ide/blink
+pio run
+	\end{lstlisting}
+\item Copy the bin file generated to ArduinoDroid/precompiled directory 
+	\label{esp32:firmware}
+	\begin{lstlisting}
+cp .pio/build/esp32doit-devkit-v1/firmware.bin /sdcard/ArduinoDroid/precompiled/
+	\end{lstlisting}
+	\item Flash the bin file to ESP32 using ArduinoDroid. Open ArduinoDroid, 
+	\begin{lstlisting}
+Actions->Upload->Upload Precompiled->firmware.bin
+	\end{lstlisting}
+	After the upload is finished we get the below error in ArduinoDroid terminal. This indicates that the code is uploaded.
+	\begin{lstlisting}
+Error: open failed: ENOENT (No such file or directory)
+	\end{lstlisting}
+	Disconnect the power supply from ESP32 and reconnect it. The onboard LED should blink.
+	\end{enumerate}
+\subsection{OTA: Wireless Flashing}
+\begin{enumerate}
+	\item Setup your mobile hotspot with 
+	\begin{lstlisting}
+	username: npal
+	password: npal1234
+	\end{lstlisting}
+	\item Connect the esp32 to your mobile through USB.
+	\item Execute the following commands using platformio
+	\begin{lstlisting}
+cd esp32/ide/ota/setup
+pio run
+	\end{lstlisting}
+	and follow the instructions from Item 
+	\ref{esp32:firmware} onwards.
+	\item Check the connected devices in your hotspot settings.  You should see the ESP as a connected device.  Obtain the IP address of your ESP from the hotspot settings.
+		Now execute the following in termux.
+	\begin{lstlisting}
+cd esp32/ide/ota/blink
+pio run
+pio run -t nobuild -t upload --upload-port 192.168.xx.xx #replace xx with IP of ESP32
+	\end{lstlisting}
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{esp32/figs/esp32.png}
+    \caption{ESP32 Devkit-v1}
+    \label{fig:esp32}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\linewidth]{esp32/figs/nodeMCU.png}
+    \caption{ESP32 NodeMCU}
+    \label{fig:nodemcu}
+\end{figure}
+In the following, we will use the OTA method for flashing the ESP32 using platformio.
+\iffalse
+\par The ESP32-devkit-v1 as shown in Figure \ref{fig:esp32} has some ground pins, ADC\brak{Analog to Digital Converter} input pins D2, D4, D12-D15, D25-D27, D32 and D33 that can be used for both input as well as output. It also has two power pin that can generate 3.3$V$.  In the following exercises, only the GND, 3.3$V$ and digital pins will be used. Similarly ESP32 NodeMCU as shown in \ref{fig:nodemcu} also has ADC pins startin with P instead of D.
+\fi
+\subsection{Seven Segment Display}
+\input{esp32/ide/sevenseg/main.tex}
+
+\subsection{7447}
+\input{esp32/ide/7447/main.tex}
+
+\subsection{7474}
+\input{esp32/ide/7474/main.tex}
+%\end{document}
