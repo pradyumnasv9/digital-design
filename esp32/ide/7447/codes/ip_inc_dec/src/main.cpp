@@ -57,8 +57,8 @@ void setup(){
     //Input
     pinMode(26, INPUT);  
     pinMode(25, INPUT);
-    pinMode(33, INPUT);
-    pinMode(32, INPUT);
+    pinMode(4, INPUT);
+    pinMode(15, INPUT);
 
 }
 
@@ -71,8 +71,8 @@ void loop() {
   //
 W = digitalRead(26);//LSB  
 X = digitalRead(25);  
-Y = digitalRead(33);  
-Z = digitalRead(32);//MSB  
+Y = digitalRead(4);  
+Z = digitalRead(15);//MSB  
   A=!W;
   B=(W&&!X&&!Y&&!Z) || (!W&&X&&!Y&&!Z) || (W&&!X&&Y&&!Z) || (!W&&X&&Y&&!Z);
   C=(W&&X&&!Y&&!Z) || (!W&&!X&&Y&&!Z) || (W&&!X&&Y&&!Z) || (!W&&X&&Y&&!Z);
